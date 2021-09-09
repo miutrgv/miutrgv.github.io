@@ -1,0 +1,232 @@
+/* -------- Top Nav -------- */
+
+.navbar {
+    background-color: #202020;
+    z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*.navbar-toggler {
+    padding: 10px;
+}
+.navbar-toggler-icon {
+    padding: 0;
+}*/
+
+.navbar-toggler-icon img {
+    width: 100%;
+    margin-right: 5px;
+}
+
+.navbar-brand {
+    margin-left: 5%;
+}
+
+.navbar-brand h5 {
+    color: #F05023;
+}
+
+.navbar span {
+    color: black;
+}
+
+.navbar a {
+    display: block;
+    color: #F0F0F0;
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar button {
+    border: 1px solid #DCDCDC;
+    padding-top: 10px;
+}
+
+.navbar-collapse {
+    margin-left: 10%;
+}
+
+.nav-item {
+    width: 100px;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+#current {
+    border-bottom: 3px solid #F05023;
+}
+
+#drop-down {
+    height: 0;
+    z-index: 15;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 6px;
+    padding: 0 15px;
+    text-align: start;
+    background-color: #202020;
+    transition: 0.5s;
+}
+
+#drop-down a {
+    display: block;
+}
+
+.navbar .nav-link:hover {
+    border-bottom: 3px solid #F05023;
+}
+
+
+
+/* -------- Peope Nav --------- */
+#people-nav {
+    border-bottom: 1px solid #F0F0F0;
+    background-color: white;
+    margin-top: 55px;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 3;
+    transition: 0.3s;
+}
+
+#people-nav a {
+    font-weight: 600;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 4px solid transparent;
+}
+
+#people-nav a:hover {
+    border-bottom: 4px solid black;
+}
+
+#people-link:hover ~ #drop-down {
+    height: 190px;
+}
+
+#drop-down:hover {
+    height: 190px;
+}
+
+/* -------- Bottom Nav -------- */
+
+.info {
+    
+    bottom: 0; left: 0;
+
+    width: 100%;
+    height: 30rem;
+    float: left;
+    text-align: center;
+    background-color: #E8E8E8;
+    
+    padding: 0 10%;
+    transition: 0.3s;
+}
+
+.info iframe {
+    height: 12rem;
+    border: 5px solid white;
+}
+
+.info li {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+.info a {
+    color:  #707070;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.info p {
+    color:  #707070;
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+.info h4 {
+    color: #F05023;
+}
+
+.info h4 abbr {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.links {
+    margin-top: 50px;
+    height: 20rem;
+    text-align: start;
+    width: 20%;
+    float: left;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.location-map {
+    margin-top: 50px;
+    height: 20rem;
+    text-align: start;
+    width: 60%;
+    float: left;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.nav-contact-us {
+    margin-top: 50px;
+    height: 20rem;
+    text-align: start;
+    width: 20%;
+    float: left;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.nav-contact-us img {
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+    .info {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+    .info {
+        padding: 0;
+        height: 47rem;
+    }
+
+    .links {
+        width: 20%;
+        height: 15rem;
+    }
+    
+    .location-map {
+        width: 80%;
+        height: 15rem;
+    }
+    
+    .nav-contact-us {
+        margin-top: 100px;
+        width: 60%;
+        height: 15rem;
+    }
+
+}

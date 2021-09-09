@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Research</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/stylesheet.css">
+        <link rel="stylesheet" href="static/navbar.css">
+
+</head>
+    <body>
+
+        <nav class="navbar fixed-top navbar-expand-lg ">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/b&w.png" width="40" height="35" class="d-inline-block align-top" alt="">
+                <span class="navbar-brand mb-0 h1">MI@UTRGV</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">☰</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html" id="current">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="people.html">People</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publications.html">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sponsors.html">Sponsors</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="pg-title">
+            <h2 class="card-title"> Research </h2>
+            <div class="line"></div>
+        </div> 
+
+        <div id="research"> 
+
+            <div class="col mb-4">
+                <div class="card">
+                <img src="images/temp.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div id="carouselExampleControls1" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="12000">
+                            <h5 class="card-title">Biomarker Discovery, Biological Network Inference, and Drug Design
+                            </h5>
+                            <p class="card-text overview">Overview:</p>
+                            <p class="research-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        </div>
+                        <div class="carousel-item" style="text-align: center;" data-interval="5000">
+                          <h5 class="card-title" id="collab-title"> Collaborators:</h5>
+                          <div class="collaborator"><img><p>Bob Bobberton</p></div>
+                          <div class="collaborator"><img><p>James Jameson</p></div>
+                          <div class="collaborator"><img><p>David Davidson</p></div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+   
+            <div class="col mb-4">
+                <div class="card">
+                <img src="images/temp.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div id="carouselExampleControls2" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="12000">
+                            <h5 class="card-title">Biomarker Discovery, Biological Network Inference, and Drug Design
+                            </h5>
+                            <p class="card-text overview">Overview:</p>
+                            <p class="research-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        </div>
+                        <div class="carousel-item" style="text-align: center;" data-interval="5000">
+                          <h5 class="card-title" id="collab-title"> Collaborators:</h5>
+                          <div class="collaborator"><img><p>Bob Bobberton</p></div>
+                          <div class="collaborator"><img><p>James Jameson</p></div>
+                          <div class="collaborator"><img><p>David Davidson</p></div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                <img src="images/temp.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div id="carouselExampleControls3" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="12000">
+                            <h5 class="card-title">Biomarker Discovery, Biological Network Inference, and Drug Design
+                            </h5>
+                            <p class="card-text overview">Overview:</p>
+                            <p class="research-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        </div>
+                        <div class="carousel-item" style="text-align: center;" data-interval="5000">
+                          <h5 class="card-title" id="collab-title"> Collaborators:</h5>
+                          <div class="collaborator"><img><p>Bob Bobberton</p></div>
+                          <div class="collaborator"><img><p>James Jameson</p></div>
+                          <div class="collaborator"><img><p>David Davidson</p></div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                <img src="images/temp.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div id="carouselExampleControls4" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="12000">
+                            <h5 class="card-title">Biomarker Discovery, Biological Network Inference, and Drug Design
+                            </h5>
+                            <p class="card-text overview">Overview:</p>
+                            <p class="research-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        </div>
+                        <div class="carousel-item" style="text-align: center;" data-interval="5000">
+                          <h5 class="card-title" id="collab-title"> Collaborators:</h5>
+                          <div class="collaborator"><img><p>Bob Bobberton</p></div>
+                          <div class="collaborator"><img><p>James Jameson</p></div>
+                          <div class="collaborator"><img><p>David Davidson</p></div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col mb-4">
+                <div class="card">
+                <img src="images/temp.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div id="carouselExampleControls5" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="12000">
+                            <h5 class="card-title">Biomarker Discovery, Biological Network Inference, and Drug Design
+                            </h5>
+                            <p class="card-text overview">Overview:</p>
+                            <p class="research-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        </div>
+                        <div class="carousel-item" style="text-align: center;" data-interval="5000">
+                          <h5 class="card-title" id="collab-title"> Collaborators:</h5>
+                          <div class="collaborator"><img><p>Bob Bobberton</p></div>
+                          <div class="collaborator"><img><p>James Jameson</p></div>
+                          <div class="collaborator"><img><p>David Davidson</p></div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls5" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls5" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="col mb-4">
+                <div class="card">
+                <img src="images/temp.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div id="carouselExampleControls6" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-interval="12000">
+                            <h5 class="card-title">Biomarker Discovery, Biological Network Inference, and Drug Design
+                            </h5>
+                            <p class="card-text overview">Overview:</p>
+                            <p class="research-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                        </div>
+                        <div class="carousel-item" style="text-align: center;" data-interval="5000">
+                          <h5 class="card-title" id="collab-title"> Collaborators:</h5>
+                          <div class="collaborator"><img><p>Bob Bobberton</p></div>
+                          <div class="collaborator"><img><p>James Jameson</p></div>
+                          <div class="collaborator"><img><p>David Davidson</p></div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls6" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls6" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </div> 
+
+        <div id="info">
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="index.html#research-link">Research</a></li>
+                </ul>
+            </div>
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                </ul>
+            </div>
+            <div id="school-info">
+                <img src="images/utrgv-logo.jpg">
+                <p>University of Texas - Rio Grande Valley</p>
+                <p>College of Engineering and Computer Science</p>
+                <p>1201 W University Dr, Edinburg, TX 78539</p>
+            </div>
+        </div>
+        
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(".card").on("mouseover", function() {
+
+                $(this).find("img").css("padding", "0");
+                $(this).find("a").css("background-color", "black");
+            });
+
+            $(".card").on("mouseleave", function() {
+
+                $(this).find("img").css("padding", "15px");
+                $(this).find("a").css("background-color", "transparent");
+            });
+
+            $('.carousel').carousel('pause');
+        </script>
+
+    </body>
+</html>
+            $(".card").on("mouseover", function() {
+
+                $(this).find("img").css("padding", "0");
+                $(this).find("a").css("background-color", "#303030");
+                $(this).find(".overview").css("padding", "0 40px");
+                $(this).find(".research-info").css("padding", "0 40px");
+            });
+
+            $(".card").on("mouseleave", function() {
+
+                $(this).find("img").css("padding", "15px");
+                $(this).find("a").css("background-color", "transparent");
+                $(this).find(".overview").css("padding", "0");
+                $(this).find(".research-info").css("padding", "0");
+            });
+
+            $('.carousel').carousel('pause');

@@ -1,0 +1,950 @@
+/* CSS code for Home, Research, People,
+   Publications, Sponsors, and About Pages
+*/
+
+/* --------------------------- All Pages ---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCFCFC;
+}
+
+.pg-title {
+    padding-top: 120px; 
+    width: 100%;
+    padding-bottom: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.pg-title h2 {
+    color: #202020;
+    font-weight: 600;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 2px solid gray;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    width: 100%;
+    padding: 0 25%;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1100px) {
+
+.input-group {
+    padding: 0 10%;
+}
+
+}
+
+
+
+
+/* ------------------------------ Home Page --------------- */
+
+#curtain {
+    margin-top: 55px;
+    top: 0; left: 0;
+    width: 100%;
+    background: rgb(9, 5, 20);
+    position: fixed;
+    z-index: 1;
+}
+
+#main-title {
+    margin-top: 100px; 
+    text-align: center;
+    width: 100%;
+    padding: 0 25%;
+    z-index: 2;
+    position: fixed;
+}
+
+#main-title .line {
+    border-bottom: 2px solid gray;
+}
+
+#home { 
+    text-align: center;
+    width: 100%;
+    min-width: 700px;
+    padding: 0;
+    z-index: 5;
+    position: absolute;
+    background-color: #303030;
+}
+
+#news {
+    width: 100%;
+    margin-top: 60px;
+    background: rgb(9, 5, 20);
+}
+
+#news ::-webkit-scrollbar {
+    height: 6px;
+}
+
+#news ::-webkit-scrollbar-track {
+    background: rgb(9, 5, 20);
+}
+
+#news ::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+#news ::-webkit-scrollbar-thumb:hover {
+    background: #F05023;
+}
+
+#news-title {
+    width: 90%;
+    margin: 0 5%;
+    padding-top: 25px;
+    border-bottom: 2px solid gray;
+}
+
+#news-title h4 {
+    font-weight: bolder;
+    font-size: 26px;
+    color: #F05023;
+}
+
+#news-articles {
+    width: 100%;
+    height: 37rem;
+    padding: 25px;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.article {
+    height: 30rem;
+    width: 24rem;
+    display: inline-block;
+    white-space: normal;
+    border-radius: 5px;
+    background-color: #202020;
+    margin: 0 25px;
+}
+
+.article-title {
+    padding: 20px;
+    height: 5rem;
+}
+
+.article-title h5 {
+    font-weight: bold;
+    font-size: 28px;
+    color: black;
+}
+
+.article-body {
+    padding: 22px;
+    height: 20rem;
+    text-align: start;
+}
+
+.article-body textarea {
+    border: none;
+    background-color: whitesmoke;
+    color: gray;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.article-body p {
+    color: gray;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.article-date {
+    padding: 20px;
+    height: 5rem;
+    text-align: start;
+}
+
+.article-date p {
+    color: blue;
+    font-size: 20px;
+}
+
+#home-carousel {
+    width: 100%;
+    padding: 0 10%; 
+    padding-bottom: 125px;
+    transition: 0.3s;
+}
+
+#home .carousel {
+    width: 100%;
+    padding: 5%;
+}
+
+#home .carousel-control-prev, #home .carousel-control-next {
+    margin-top: 30%;
+    width: 35px;
+    height: 10%;
+    background-color: black;
+    opacity: 1;
+}
+
+.home-info p {
+    color:  lightgray;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.home-info a {
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.home-info button {
+    background-color: #F05023;
+    height: 50px;
+    width: 125px;
+    color: #202020;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+}
+
+#home h4 {
+    font-weight: bolder;
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #F05023;
+}
+
+.home-info {
+    background-color: #202020;
+    text-align: center; 
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+    margin: 75px 0;
+}
+
+.home-info img {
+    width: 100%;
+}
+
+.home-text {
+    padding: 5%;
+}
+
+.home-left {
+    text-align: start;
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    top: 0; left: 0;
+}
+
+.home-right {
+    text-align: start;
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    top: 0; right: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  #home-carousel {
+    padding: 0 2%; 
+  }
+
+  #home h4 {
+    font-size: x-large;
+  }
+
+  .home-info p {
+    font-size: larger;
+  }
+
+}
+
+/* ----------------------------------- Research Page --------------- */
+
+#research {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 25px 5%;
+    padding-bottom: 125px;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+
+#research p {
+    color: #707070;
+}
+
+#research strong {
+    color: #F05023;
+}
+
+#research .research-item {
+    background-color: white;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    width: 375px;
+    padding-top: 475px;
+    position: relative;
+    /*max-width: 30rem;*/
+    display: inline-block;
+
+}
+
+.research-img {
+    position: absolute;
+    top: 0; left: 0;
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#research .research-item-body {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    height: 275px;
+    padding: 15px;
+    border-top: 6px solid black;
+    transition: 0.3s;
+}
+
+.research-item-body h5 {
+    color: black;
+    font-weight: bold;
+    text-align: start;  
+    font-size: larger;
+}
+
+.research-item-body h5:hover {
+    color: #F05023;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#research .overview {
+    width: 100%;
+    padding: 0 25px;
+}
+
+#research .carousel {
+    margin-top: 20px;
+}
+
+.research-item-body p {
+    margin-bottom: 1px;
+    text-align: start;
+}
+
+.carousel-inner {
+    transition: 0.3s;
+}
+
+#research .carousel-control-prev, #research .carousel-control-next {
+    opacity: 0.7;
+    margin-top: 2rem;
+    height: 80px; 
+    width: 18px;
+}
+
+.collaborator {
+    /*display: inline-block;*/
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.collaborator p {
+    text-align: center;
+    font-size: x-small;
+}
+
+.collaborator img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px; 
+}
+
+/*
+
+@media only screen and (max-width: 132rem) {
+
+    #research .research-item {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #research .research-item {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    #research .research-item {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #research .research-item {
+        width: 100%;
+    }
+}
+
+*/
+
+/* ------------------------------ People Page --------------- */
+
+.people {
+    padding: 25px 5%;
+    padding-bottom: 125px;
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.group {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.team {
+    width: 49%;
+    display: inline-block;
+    padding: 0 0 60px 0;
+}
+
+.team-name {
+    text-align: center;
+    width: 90%;
+    margin: 0 5%;
+    padding: 5px;
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/*
+@media only screen and (max-width: 1682px) {
+
+    .team {
+        width: 100%;
+    }
+
+    .team-name {
+	width: 100%;
+	margin: 0 0 20px 0;
+    }
+}
+*/
+
+.member {
+    background-color: white;
+    width: 14rem;
+    height: 27rem;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.member-info {
+    border-top: 5px solid black;
+    text-align: center;
+    height: 13rem;
+    padding: 5px 15px;
+    padding-top: 5px;
+}
+
+.member h5 {
+    margin-bottom: 0;
+    color: black;
+}
+
+.member strong {
+    color: #F05023;
+    font-size: medium;
+}
+
+.member-info-align {
+    margin-top: 5px;
+    text-align: start;
+}
+
+.member-info-align strong {
+    color: #707070;
+    font-size: small;
+    font-weight: 700;
+}
+
+.member p {
+    font-size: smaller;
+    margin-bottom: 0;
+    color: #707070;
+}
+
+.member a {
+    font-size: smaller;
+    margin-bottom: 0;
+}
+
+.member img {
+    height: 14rem;
+    width: 14rem;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#collab, #faculty {
+    text-align: center;
+}
+
+/* ------------------------------ Publications Page --------------- */
+
+#sort-button {
+    background-color: #F05023;
+    color: #303030;
+    border: none;
+    font-weight: bold;
+}
+
+.sort {
+    float: left;
+    text-align: start;
+}
+
+#publications {
+    padding: 25px 10%; 
+    padding-bottom: 125px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#publications h5 {
+    color: #202020;
+    text-align: start;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#publications p {
+    color: #707070;
+    text-align: start;
+    font-size: 20px;
+}
+
+.articles {
+    border-bottom: 1px solid #707070;
+    margin: 0% 10%;
+    padding-top: 30px;
+
+}
+
+.authors {
+    margin-bottom: 0px;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #publications {
+        padding: 25px 2%; 
+    }
+
+}
+
+/* ------------------------------------- Sponsors Page --------------- */
+
+#sponsors {
+    width: 100%;
+    min-width: 700px;
+    padding: 25px 20%; 
+    padding-bottom: 125px;
+    text-align: center;
+    background-color: whitesmoke;
+    transition: 0.3s;
+}
+
+.sponsor {
+    text-align: center;
+    width: 100%;
+    /*height: auto;
+    max-height: 300px;*/
+    padding-top: 20%;
+    position: relative;
+    overflow: hidden;
+    background-color: white; 
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.sponsor img {
+    display: inline-block;
+    width: 20%;
+    padding: 15px;
+    /*min-height: 500px;*/
+    vertical-align: top;
+    /*border-right: 6px solid black;*/
+    position: absolute;
+    top: 0; left: 0;
+    transition: 0.3s;
+}
+
+/*.sponsor-img img {
+   width: 100%;
+   transition: 0.3s;
+}*/
+
+.sponsor-info {
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    top: 0; right: 0;
+    width: 79%;
+    vertical-align: top;
+    /*height: auto;*/
+    height: 100%;
+    padding: 30px 20px;
+    border-left: 6px solid #202020;
+    transition: 0.3s;
+}
+
+.sponsor:hover .sponsor-info {
+    /*border-right: 6px solid #F05023;*/
+    border-left: 6px solid #F05023;
+}
+
+.sponsor:hover img {
+    padding: 5px;
+}
+
+.sponsor-info p {
+    color: #707070;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.sponsor h5 {
+    font-weight: bold;
+    font-size: 26px;
+    color: #202020;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1500px) {
+
+    #sponsors {
+        padding: 25px 2%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .sponsor-info p {
+        font-size: 16px;
+    }
+    .sponsor-info h5 {
+        font-size: 22px;
+    }
+
+}
+
+/* ----------------------------- Link Page ------------------ */
+
+#link-page {
+    width: 100%;
+    min-width: 700px;
+    padding: 100px 20%; 
+    padding-bottom: 125px;
+    text-align: center;
+    background-color: whitesmoke;
+    transition: 0.3s;
+}
+
+.link-block {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 100px;
+    transition: 0.3s;
+}
+
+.link-block-title {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 6px solid black;
+}
+
+.link-block-title h5 {
+    font-weight: bold;
+    font-size: x-large;
+    transition: 0.3s;
+}
+
+
+.link-block:hover .link-block-title {
+    border-bottom: 6px solid #F05023;
+}
+
+.link-block-content {
+    width: 100%;
+    text-align: start;
+    padding: 25px;
+}
+
+@media only screen and (max-width: 1500px) {
+
+    #link-page {
+        padding: 25px 2%;
+    }
+
+}
+
+
+/* --------------------------- About Us Page --------------- */
+
+#background-img {
+    width: 100%;
+}
+
+#about-title {
+    margin-top: 150px;
+    margin-left: 50px;
+    padding: 5px;
+    border-radius: 2%;
+    position: absolute;
+    z-index: 5;
+    top: 0; left: 0;
+    color: black;
+    background: rgba(250, 250, 250, 0.7);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#about-logo {
+    width: 36%;
+    margin-top: 150px;
+    margin-right: 50px;
+    position: absolute;
+    z-index: 5;
+    top: 0; right: 0;
+    background: rgba(250, 250, 250, 0.7);
+    border-radius: 2%;
+    padding: 30px 15px;
+    transition: 0.3s;
+}
+
+.about {
+    width: 100%;
+    min-width: 700px;
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: whitesmoke;
+}
+
+.about h4 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 20px;
+    color: #707070;
+}
+
+.about strong {
+    color: #202020;
+}
+
+.about li {
+    list-style-type: none;
+    font-size: 20px;
+    color: #707070;
+}
+
+.about-info {
+    width: 100%;
+    padding-top: 50%;
+    text-align: justify;
+    margin: 0;
+    position: relative;
+    background-color: white;
+}
+
+.about-img-left {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.about-img-right {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0; right: 0;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.about-data {
+    text-align: start;
+    width: 60%;
+    margin: 100px 20%;
+    padding: 0;
+    background-color: white;
+}
+
+#mi-about {
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+    border-left: 6px solid black;
+    transition: 0.3s;
+}
+
+#eieab-research-lab {
+    text-align: start;
+    font-weight: bold;
+    z-index: 5;
+    position: absolute;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 2%;
+    background: rgba(250, 250, 250, 0.7);
+} 
+
+.about-data-left {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    top: 0; left: 0;
+    padding: 25px;
+    border-right: 6px solid black;
+    transition: 0.3s;
+}
+
+.about-data-right {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    top: 0; right: 0;
+    padding: 25px;
+    border-left: 6px solid black;
+    transition: 0.3s;
+}
+
+.about-data:hover #mi-about {
+    border-left: 6px solid #F05023;
+}
+
+.about-info:hover .about-data-left {
+    border-right: 6px solid #F05023;
+}
+
+.about-info:hover .about-data-right {
+    border-left: 6px solid #F05023;
+}
+
+.about-info:hover .about-img-left {
+    padding: 0px;
+}
+
+.about-info:hover .about-img-right {
+    padding: 0px;
+}
+
+
+@media only screen and (max-width: 1370px) {
+
+    .about-data {
+        width: 90%;
+        margin: 100px 5%;
+    }
+
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #about-title {
+        margin-top: 75px;
+        font-size: xx-large;
+    }
+
+    #about-logo {
+        margin-top: 75px;
+    }
+
+    .about h4 {
+        font-size: 24px;
+    }
+    
+    .about p {
+        font-size: 18px;
+    }
+    
+    .about li {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 940px) {
+
+    .about h4 {
+        font-size: 20px;
+    }
+    
+    .about p {
+        font-size: 14px;
+    }
+    
+    .about li {
+        font-size: 14px;
+    }
+
+}
+
