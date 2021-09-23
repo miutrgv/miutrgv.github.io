@@ -1,53 +1,30 @@
-<?php
-
-	include '../phpfiles/newscred.php';
-
-        $req = "SELECT * FROM News";
-        $result = $conn->query($req);
-        class Article {
-        	public $title;
-                public $body;
-		public $date;
-        }
-        $news = array();
-        $i = 0;
-        while ( $row = $result->fetch_assoc() ) {
-        	$news[$i] = new Article();
-                $news[$i]->title = $row['title'];
-                $news[$i]->body = $row['body'];
-		$news[$i]->date = $row['date'];
-                $i++;
-        }
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Home</title>
 	<link rel="icon" href="images/navbar/miutrgv_logo.ico" type="image/x-icon">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="static/stylesheet.css?034">
-        <link rel="stylesheet" href="static/navbar.css?1234">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/stylesheet.css?034">
+  <link rel="stylesheet" href="static/navbar.css?1234">
 
-        <style>
-                #home {margin-top: 200px;}
-                #news {margin-top: 120px;}
-                .article h5 {font-size: 26px; color: #F05023; font-weight: bolder;}
-                .article p {font-size: 22px; color: lightgray; text-align: start;}
-                .article-date {padding: 0 20px;}
-                .article-body textarea {width: 100%;}
-                .home-info {width: 70rem; padding-top: 35rem; transition: 0.8s;}
-                #home-carousel {width: 75rem; height: 55rem; padding: 0; display: inline-block; margin-top: -90px;}
-                @media only screen and (max-width: 1500px) {
-                        #home-carousel {width: 55rem; height: 40rem;}
-                        .home-info {width: 50rem; padding-top: 25rem;}
-                }
-                #main-title {padding: 0; margin: 0;}
-                #main-title-logo {padding: 0 25px; width: 250px; height: 250px; display: inline-block;}
-                #topics {width: 100%; margin-top: 120px; background-color: rgb(9, 5, 20);}
-	</style>
+  <style>
+    #home {margin-top: 200px;}
+    #news {margin-top: 120px;}
+    .article h5 {font-size: 26px; color: #F05023; font-weight: bolder;}
+    .article p {font-size: 22px; color: lightgray; text-align: start;}
+    .article-date {padding: 0 20px;}
+    .article-body textarea {width: 100%;}
+    .home-info {width: 70rem; padding-top: 35rem; transition: 0.8s;}
+    #home-carousel {width: 75rem; height: 55rem; padding: 0; display: inline-block; margin-top: -90px;}
+    @media only screen and (max-width: 1500px) {
+      #home-carousel {width: 55rem; height: 40rem;}
+      .home-info {width: 50rem; padding-top: 25rem;}
+    }
+    #main-title {padding: 0; margin: 0;}
+    #main-title-logo {padding: 0 25px; width: 250px; height: 250px; display: inline-block;}
+    #topics {width: 100%; margin-top: 120px; background-color: rgb(9, 5, 20);}
+  </style>
 
 </head>
     <body>
@@ -91,60 +68,61 @@
 
         <canvas id="curtain"></canvas>
         <div id="main-title">
-	<div id="main-title-logo">
-          <img src="images/home/miutrgv_home.svg"/>
-          <div class="line"></div>
+          <div id="main-title-logo">
+            <img src="images/home/miutrgv_home.svg"/>
+            <div class="line"></div>
+          </div>
         </div>
-	</div>
 
         <div id="home">
-
           <div id="news">
-                <div id="news-title">
-                        <h4 style="font-size: 30px;">News</h4>
+
+            <div id="news-title">
+              <h4 style="font-size: 30px;">News</h4>
+            </div>
+
+            <div id="news-articles" style="margin-top: 20px; margin-bottom: 75px;">
+              <div class="article">
+                <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
+                  <img class="card-img-top" src="images/home/mi-news.png">
+                  <div class="card-body">
+                    <h5 class="card-title">New MILab Bulletin</h5>
+                  <p class="card-text">Great news!</br>You can now be up to date with the lates MI activities/ events by simply visiting our home page.</p>
                 </div>
-                <div id="news-articles" style="margin-top: 20px; margin-bottom: 75px;">
-                        <div class="article">
-                                <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
-                                        <img class="card-img-top" src="images/home/mi-news.png">
-                                        <div class="card-body">
-                                                <h5 class="card-title">New MILab Bulletin</h5>
-                                                <p class="card-text">Great news!</br>You can now be up to date with the lates MI activities/ events by simply visiting our home page.</p>
-                                        </div>
-                                </div>
-                                <div class="article-date">
-                                        <p style="color: #6495ed;">July 01, 2020 8:00</p>
-                                </div>
-                        </div>
+              </div>
+              <div class="article-date">
+                <p style="color: #6495ed;">July 01, 2020 8:00</p>
+              </div>
+            </div>
 
-                        <div class="article">
-                                <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
-                                        <img class="card-img-top" src="images/home/thesis.png">
-                                        <div class="card-body">
-                                                <h5 class="card-title">Armando has completed his thesis defense successfully</h5>
-                                        </div>
-                                </div>
-                                <div class="article-date">
-                                        <p style="color: #6495ed;">January 09, 2020 8:00</p>
-                                </div>
-                        </div>
-		</div>
-	  </div>
-
-	<div id="topics">
-
-                <div id="news-title">
-                        <h4 style="font-size: 30px;">Research Topics</h4>
+            <div class="article">
+              <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
+                <img class="card-img-top" src="images/home/thesis.png">
+                <div class="card-body">
+                  <h5 class="card-title">Armando has completed his thesis defense successfully</h5>
                 </div>
+              </div>
+              <div class="article-date">
+                <p style="color: #6495ed;">January 09, 2020 8:00</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="topics">
+
+          <div id="news-title">
+            <h4 style="font-size: 30px;">Research Topics</h4>
+          </div>
 
           <div id="home-carousel">
-
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
               </ol>
               <div class="carousel-inner">
 
@@ -156,7 +134,7 @@
                     <div class="home-right home-text">
                       <h4>Machine Learning</h4>
                       <p>Machine learning is the scientific study of algorithms and statistical models that computer systems use to perform a specific.</p>
-		      <button onclick="window.location.href = 'https://en.wikipedia.org/wiki/Machine_learning';">Learn More</button>
+                      <button onclick="window.location.href = 'https://en.wikipedia.org/wiki/Machine_learning';">Learn More</button>
                     </div>
                   </div>
                 </div>
@@ -167,7 +145,7 @@
                       <h4>Bioinfomatics</h4>
                       <p>Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data. As an interdisciplinary field of science.</p>
                       <button onclick="window.location.href = 'https://en.wikipedia.org/wiki/Bioinformatics';">Learn More</button>
-		    </div>
+                    </div>
                     <div class="home-right">
                       <img src="images/home/dna.jpg" />
                     </div>
@@ -210,9 +188,9 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
-
           </div>
-	</div>
+
+        </div>
 
           <div class="info">
 
