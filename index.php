@@ -82,33 +82,60 @@
             </div>
 
             <div id="news-articles" style="margin-top: 20px; margin-bottom: 75px;">
+
+              <div class="article">
+                <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
+                  <img class="card-img-top" src="images/home/first_meeting.jpg">
+                  <div class="card-body">
+                    <h5 class="card-title">MILab has its first meeting</h5>
+                    <p class="card-text">The MILab team has met for the first time in its first of many biweekly meetings.</p>
+                  </div>
+                </div>
+                <div class="article-date">
+                  <p style="color: #6495ed;">September 28, 2021</p>
+                </div>
+              </div>
+
+              <div class="article">
+                <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
+                  <img class="card-img-top" src="images/home/thesis.png">
+                  <div class="card-body">
+                    <h5 class="card-title">Armando has completed his thesis defense successfully</h5>
+                  </div>
+                </div>
+                <div class="article-date">
+                  <p style="color: #6495ed;">January 09, 2020</p>
+                </div>
+              </div>
+
+              <div class="article">
+                <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
+                  <img class="card-img-top" src="images/home/bee_funding.jpg">
+                  <div class="card-body">
+                    <h5 class="card-title">UTRGV professors receive federal grant</h5>
+                    <p class="card-text">Research by Dr. Kim and Dr. Rampersad-Ammons on honeybee population is funded by the USDA.</p>
+                  </div>
+                </div>
+                <div class="article-date">
+                  <p style="color: #6495ed;">January 03, 2020</p>
+                </div>
+              </div>
+
               <div class="article">
                 <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
                   <img class="card-img-top" src="images/home/mi-news.png">
                   <div class="card-body">
                     <h5 class="card-title">New MILab Bulletin</h5>
-                  <p class="card-text">Great news!</br>You can now be up to date with the lates MI activities/ events by simply visiting our home page.</p>
+                    <p class="card-text">Great news!</br>You can now be up to date with the lates MI activities/ events by simply visiting our home page.</p>
+                  </div>
+                </div>
+                <div class="article-date">
+                  <p style="color: #6495ed;">July 01, 2020</p>
                 </div>
               </div>
-              <div class="article-date">
-                <p style="color: #6495ed;">July 01, 2020 8:00</p>
-              </div>
-            </div>
 
-            <div class="article">
-              <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
-                <img class="card-img-top" src="images/home/thesis.png">
-                <div class="card-body">
-                  <h5 class="card-title">Armando has completed his thesis defense successfully</h5>
-                </div>
-              </div>
-              <div class="article-date">
-                <p style="color: #6495ed;">January 09, 2020 8:00</p>
-              </div>
             </div>
-
           </div>
-        </div>
 
         <div id="topics">
 
