@@ -83,6 +83,19 @@
 
             <div id="news-articles" style="margin-top: 20px; margin-bottom: 75px;">
 
+            <div class="article">
+                <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
+                  <img class="card-img-top" src="images/home/DSC_0004.jpg">
+                  <div class="card-body">
+                    <h5 class="card-title">MILab meets with CS Chair</h5>
+                    <p class="card-text">The MILab team met today with CS department chair Dr. Emmet Tomai to present their progress on ongoing research projects.</p>
+                  </div>
+                </div>
+                <div class="article-date">
+                  <p style="color: #6495ed;">November 08, 2021</p>
+                </div>
+              </div>
+
               <div class="article">
                 <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
                   <img class="card-img-top" src="images/home/first_meeting.jpg">
