@@ -88,7 +88,7 @@
                   <img class="card-img-top" src="images/home/DSC_0004.jpg">
                   <div class="card-body">
                     <h5 class="card-title">MILab meets with CS Chair</h5>
-                    <p class="card-text">The MILab team met today with CS department chair Dr. Emmet Tomai to present their progress on ongoing research projects.</p>
+                    <p class="card-text">The MILab team had its 4th meeting today with CS department chair Dr. Emmett Tomai to present their ongoing progress.</p>
                   </div>
                 </div>
                 <div class="article-date">
@@ -105,7 +105,7 @@
                   </div>
                 </div>
                 <div class="article-date">
-                  <p style="color: #6495ed;">September 28, 2021</p>
+                  <p style="color: #6495ed;">September 27, 2021</p>
                 </div>
               </div>
 
@@ -113,7 +113,8 @@
                 <div class="card" style="width: 100%; height: 27rem; vertical-align: top; background-color: transparent;">
                   <img class="card-img-top" src="images/home/thesis.png">
                   <div class="card-body">
-                    <h5 class="card-title">Armando has completed his thesis defense successfully</h5>
+                    <h5 class="card-title">Thesis Completed!</h5>
+                    <p class="card-text">MILab team member, Armando Herrera, has successfully completed his thesis defense.</p>
                   </div>
                 </div>
                 <div class="article-date">
