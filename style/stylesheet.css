@@ -597,51 +597,36 @@ body {
 }
 
 .sponsor {
-    text-align: center;
     width: 100%;
-    /*height: auto;
-    max-height: 300px;*/
-    padding-top: 20%;
-    position: relative;
+    padding: 0;
     overflow: hidden;
     background-color: white; 
     margin-bottom: 50px;
     transition: 0.3s;
+    font-size: 0;
 }
 
-.sponsor img {
-    display: inline-block;
+.sponsor-img {
     width: 20%;
-    padding: 15px;
-    /*min-height: 500px;*/
-    vertical-align: top;
-    /*border-right: 6px solid black;*/
-    position: absolute;
-    top: 0; left: 0;
     transition: 0.3s;
 }
 
-/*.sponsor-img img {
-   width: 100%;
-   transition: 0.3s;
-}*/
+.sponsor-img img {
+    width: 100%;
+    padding: 15px;
+    transition: 0.3s;
+}
 
 .sponsor-info {
     text-align: left;
-    display: inline-block;
-    position: absolute;
-    top: 0; right: 0;
-    width: 79%;
     vertical-align: top;
-    /*height: auto;*/
-    height: 100%;
+    width: 80%;
     padding: 30px 20px;
-    border-left: 6px solid #202020;
     transition: 0.3s;
+    border-left: 6px solid #202020;
 }
 
 .sponsor:hover .sponsor-info {
-    /*border-right: 6px solid #F05023;*/
     border-left: 6px solid #F05023;
 }
 
@@ -666,17 +651,6 @@ body {
 
     #sponsors {
         padding: 25px 2%;
-    }
-
-}
-
-@media only screen and (max-width: 1000px) {
-
-    .sponsor-info p {
-        font-size: 16px;
-    }
-    .sponsor-info h5 {
-        font-size: 22px;
     }
 
 }
