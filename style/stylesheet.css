@@ -337,12 +337,6 @@ body {
     font-size: larger;
 }
 
-.research-item-body h5:hover {
-    color: #F05023;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 #research .overview {
     width: 100%;
     padding: 0 25px;
@@ -386,6 +380,25 @@ body {
     width: 40px;
     border-radius: 50%;
     margin: 5px; 
+}
+
+.research-description {
+    width: 100%; 
+    padding: 25px 0 15px 0;
+}
+
+#research-description-text {
+    width: 100%; 
+    max-width: 800px; 
+    font-size: 20px; 
+    display: inline-block; 
+    text-align: start; 
+    border-top: 2px solid #666666; 
+    padding-top: 15px;
+}
+
+.research-description img {
+    width: 800px;
 }
 
 /*
