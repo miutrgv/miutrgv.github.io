@@ -17,6 +17,7 @@ $("#search-bar").on("keyup", function() {
 		$(".member").attr("data-aos", " ");
 		$(".member").hide();
 		$(".sub-title").hide();
+		$(".member-classification").hide();
 
 		for (var j = 0; j < names.length; j++) {
 			if (lower == names[j].substring(0, lower.length)) {
@@ -36,6 +37,7 @@ $("#search-bar").on("keydown", function() {
 		$(".member").attr("data-aos", "zoom-in-up");
 		$(".member").show();
 		$(".sub-title").show();
+		$(".member-classification").show();
 	}
 
 });
