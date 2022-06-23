@@ -541,6 +541,7 @@ body {
 
 .member-classification {
     margin: 0;
+    bottom: 50px;
     position: relative;
     left: 50%;
     right: 50%;
