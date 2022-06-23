@@ -539,6 +539,18 @@ body {
     transition: 0.3s;
 }
 
+.member-classification {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+}
+
 #collab, #faculty {
     text-align: center;
 }
