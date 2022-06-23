@@ -540,6 +540,7 @@ body {
 }
 
 .member-classification {
+    margin: 0;
     position: relative;
     left: 50%;
     right: 50%;
