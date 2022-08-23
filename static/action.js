@@ -10,7 +10,7 @@ $("#nav-opt3").on("mouseleave", function() {
 
 // Show dropdown links for Research.
 $("#nav-opt2").on("mouseover", function() {
-    document.getElementById('research-opt').style.height = '225px';
+    document.getElementById('research-opt').style.height = '275px';
 });
 $("#nav-opt2").on("mouseleave", function() {
     document.getElementById('research-opt').style.height = '0px';
