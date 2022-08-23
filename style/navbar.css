@@ -4,14 +4,8 @@
     background-color: #202020;
     z-index: 10;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
 }
-
-/*.navbar-toggler {
-    padding: 10px;
-}
-.navbar-toggler-icon {
-    padding: 0;
-}*/
 
 .navbar-toggler-icon img {
     width: 100%;
@@ -20,6 +14,10 @@
 
 .navbar-brand {
     margin-left: 5%;
+}
+
+.navbar-brand img {
+    width: 190px;
 }
 
 .navbar-brand h5 {
@@ -58,7 +56,7 @@
     border-bottom: 3px solid #F05023;
 }
 
-#drop-down {
+.drop-down {
     height: 0;
     z-index: 15;
     overflow: hidden;
@@ -70,7 +68,7 @@
     transition: 0.5s;
 }
 
-#drop-down a {
+.drop-down a {
     display: block;
 }
 
@@ -78,43 +76,6 @@
     border-bottom: 3px solid #F05023;
 }
 
-
-
-/* -------- Peope Nav --------- */
-#people-nav {
-    border-bottom: 1px solid #F0F0F0;
-    background-color: white;
-    margin-top: 55px;
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    z-index: 3;
-    transition: 0.3s;
-}
-
-#people-nav a {
-    font-weight: 600;
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-bottom: 4px solid transparent;
-}
-
-#people-nav a:hover {
-    border-bottom: 4px solid black;
-}
-
-#people-link:hover ~ #drop-down {
-    height: 190px;
-}
-
-#drop-down:hover {
-    height: 190px;
-}
 
 /* -------- Bottom Nav -------- */
 
@@ -206,7 +167,9 @@
     }
 }
 
-@media only screen and (max-width: 950px) {
+/* -- Adjust style for phones/small screens -- */
+
+@media only screen and (max-width: 1000px) {
 
     .info {
         padding: 0;
@@ -229,4 +192,20 @@
         height: 15rem;
     }
 
+    .navbar {
+        height: 85px;
+    }
+
+    .navbar-brand img {
+        width: 240px;
+    }
+
+    .navbar a {
+        font-size: large;
+    }
+
+    .navbar li {
+        height: 60px;
+        text-align: start;
+    }
 }
