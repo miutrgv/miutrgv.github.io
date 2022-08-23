@@ -387,6 +387,10 @@ body {
     padding: 25px 0 15px 0;
 }
 
+.research-description img {
+    width: 800px;
+}
+
 #research-description-text {
     width: 100%; 
     max-width: 800px; 
@@ -397,8 +401,26 @@ body {
     padding-top: 15px;
 }
 
-.research-description img {
-    width: 800px;
+.research-description-text {
+    width: 100%; 
+    max-width: 800px; 
+    font-size: 20px; 
+    display: inline-block; 
+    text-align: start; 
+    border-top: 2px solid #666666; 
+    padding-top: 15px;
+}
+
+.research-description-image {
+    width: 100%; 
+    max-width: 600px; 
+    display: inline-block; 
+    text-align: center; 
+}
+
+.research-description-image img {
+    display: inline-block;
+    width: 600px;
 }
 
 /*
