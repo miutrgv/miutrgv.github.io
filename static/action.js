@@ -10,7 +10,7 @@ $("#nav-opt3").on("mouseleave", function() {
 
 // Show dropdown links for Research.
 $("#nav-opt2").on("mouseover", function() {
-    document.getElementById('research-opt').style.height = '275px';
+    document.getElementById('research-opt').style.height = '355px';
 });
 $("#nav-opt2").on("mouseleave", function() {
     document.getElementById('research-opt').style.height = '0px';
@@ -44,6 +44,21 @@ $(".member").on("mouseleave", function() {
 
     $(this).find("img").css("padding", "10px");
     $(this).find(".member-info").css("border-top", "5px solid black");
+});
+
+
+// --------------- People Page --------------------
+
+// Zooms in picture and changes border color to orange.
+$(".research-item").on("mouseover", function() {
+
+    $(this).find("img").css("padding", "0");
+    $(this).find(".research-item-body").css("border-top", "5px solid #F05023");
+});
+$(".research-item").on("mouseleave", function() {
+
+    $(this).find("img").css("padding", "10px");
+    $(this).find(".research-item-body").css("border-top", "5px solid black");
 });
 
 
