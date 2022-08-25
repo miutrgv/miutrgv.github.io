@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>3DMol Protein</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="../style/3dmol.css">
+        <style>
+            .mol-container {
+              width: 60%;
+              height: 400px;
+              position: relative;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="sidebar">
+            <button id="sidebar-btn" type="button" class="btn btn-outline-light">Close</button>
+            <div id="library">
+                <p class="info">Select a protein to view in the 3D Model Display</p>
+                <div id="table-title" class="title">Top 50 Scored PDBs</div>
+                <div id="pdb-ids">
+                    <table>
+                        <tr><td class="pdb" value="4OR0">4OR0</td></tr>
+                        <tr><td class="pdb" value="2VDB">2VDB</td></tr>
+                        <tr><td class="pdb" value="4OT2">4OT2</td></tr>
+                        <tr><td class="pdb" value="5DBY">5DBY</td></tr>
+                        <tr><td class="pdb" value="4ZBR">4ZBR</td></tr>
+                        <tr><td class="pdb" value="4JQ1">4JQ1</td></tr>
+                        <tr><td class="pdb" value="4L0A">4L0A</td></tr>
+                        <tr><td class="pdb" value="2P06">2P06</td></tr>
+                        <tr><td class="pdb" value="2ZJR">2ZJR</td></tr>
+                        <!-- <tr><td class="pdb" value="4YUU">4YUU</td></tr> -->
+                        <tr><td class="pdb" value="2EJF">2EJF</td></tr>
+                        <tr><td class="pdb" value="1UG9">1UG9</td></tr>
+                        <tr><td class="pdb" value="4FJP">4FJP</td></tr>
+                        <tr><td class="pdb" value="6SVS">6SVS</td></tr>
+                        <!-- <tr><td class="pdb" value="3GLP">3GLP</td></tr> -->
+                        <tr><td class="pdb" value="2F2H">2F2H</td></tr>
+                        <tr><td class="pdb" value="1ZRU">1ZRU</td></tr>
+                        <tr><td class="pdb" value="3Q9H">3Q9H</td></tr>
+                        <tr><td class="pdb" value="3EDK">3EDK</td></tr>
+                        <tr><td class="pdb" value="3EDJ">3EDJ</td></tr>
+                        <tr><td class="pdb" value="3EDE">3EDE</td></tr>
+                        <tr><td class="pdb" value="4PEV">4PEV</td></tr>
+                        <tr><td class="pdb" value="3OI8">3OI8</td></tr>
+                        <tr><td class="pdb" value="5D99">5D99</td></tr>
+                        <tr><td class="pdb" value="4NXH">4NXH</td></tr>
+                        <tr><td class="pdb" value="3DVZ">3DVZ</td></tr>
+                        <tr><td class="pdb" value="2GQ7">2GQ7</td></tr>
+                        <tr><td class="pdb" value="2GQ6">2GQ6</td></tr>
+                        <tr><td class="pdb" value="2GQ5">2GQ5</td></tr>
+                        <tr><td class="pdb" value="2GQ4">2GQ4</td></tr>
+                        <tr><td class="pdb" value="2G32">2G32</td></tr>
+                        <tr><td class="pdb" value="7DNS">7DNS</td></tr>
+                        <tr><td class="pdb" value="2AXT">2AXT</td></tr>
+                        <tr><td class="pdb" value="1R0U">1R0U</td></tr>
+                        <tr><td class="pdb" value="1O82">1O82</td></tr>
+                        <tr><td class="pdb" value="1JMX">1JMX</td></tr>
+                        <tr><td class="pdb" value="1W6S">1W6S</td></tr>
+                        <tr><td class="pdb" value="1RWH">1RWH</td></tr>
+                        <tr><td class="pdb" value="1CB8">1CB8</td></tr>
+                        <tr><td class="pdb" value="3ZTV">3ZTV</td></tr>
+                        <tr><td class="pdb" value="3UAY">3UAY</td></tr>
+                        <tr><td class="pdb" value="3UAW">3UAW</td></tr>
+                        <tr><td class="pdb" value="3QWU">3QWU</td></tr>
+                        <tr><td class="pdb" value="3H9U">3H9U</td></tr>
+                        <tr><td class="pdb" value="7LHN">7LHN</td></tr>
+                        <tr><td class="pdb" value="7LHM">7LHM</td></tr>
+                        <tr><td class="pdb" value="7EIR">7EIR</td></tr>
+                        <tr><td class="pdb" value="6XLT">6XLT</td></tr>
+                        <tr><td class="pdb" value="4YW4">4YW4</td></tr>
+                        <tr><td class="pdb" value="3M46">3M46</td></tr>
+                    </table>
+                </div>
+                <div class="title" style="margin-top: 15px; margin-bottom: -15px;">
+                    <p class="info">Search for any protein using PDB id. For exampel "3EML".</p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control pdbid" placeholder="PDB id" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text search " 3dview="protein-01" err="pdb-error01">search</span>
+                </div>
+                <p id="pdb-error01" class="pdb-error" hidden>A PDB with that id was not found.</p>
+                <div class="title" style="margin-top: 15px; text-align: center;">
+                    <p class="info">Select a number of 3D Model Displays to view side by side.</p>
+                    <select class="form-select" style="width: 80px; display: inline-block;">
+                        <option onclick="displays(1)" selected>1</option>
+                        <option onclick="displays(2)">2</option>
+                        <option onclick="displays(3)">3</option>
+                        <option onclick="displays(4)">4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="dashboard">
+
+            <div class="section">
+                <!-- Main Container, only sidebar table and search work here. -->
+                <div class="container">
+                    <div class="title top"><h5>3D Model Display</h5></div>
+                    <div id="protein-01" class="style-protein"></div>
+                    <!-- Controls start here -->
+                    <div class="title controls">
+                        <!-- HETATM Buttons -->
+                        <div id="hetatm-protein-01" class="control-row">
+                            <div id="hetatm" class="hetatm-box">
+                                <input class="form-check-input" type="checkbox" checked hidden>
+                                <label class="form-check-label" for="flexRadioDefault2"></label>
+                            </div>
+                        </div>
+                        <!-- Chain Style Buttons -->
+                        <div class="control-row">
+                            <input id="display-protein-01" class="form-check-input" onclick="chainDisplay('protein-01')" type="checkbox" checked>
+                            <select id="chains-protein-01" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option id="chain" onclick="chain('protein-01', 'ALL')" selected>ALL</option>
+                            </select>
+                            <label>Chain</label>
+                            <div class="btn-group" role="group" aria-label="Basic example" 3dview="protein-01">
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=0>Line</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=1>Cross</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=2>Stick</button>
+                                <div class="btn-group" role="group" 3dview="protein-01">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cartoon
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=3>default</a></li>
+                                        <li><a class="dropdown-item style-btn" value=4>trace</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-01">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sphere
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 0.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.0</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 2.0</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-01" typeStyle="{}">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Color
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=6>spectrum</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>salmon</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>red</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightblue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>blue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightgreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>seagreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>green</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightyellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>yellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>mediumpurple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>purple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>violet</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>pink</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>grey</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>black</a></li>
+                                </div>
+                                <button id ="label-protein-01" type="button" class="btn btn-light btn-sm style-btn" cntrl=0 value=7>Labels</button>
+                            </div>
+                        </div>
+                        <!-- Spin Control Buttons -->
+                        <div class="control-row" 3dview="protein-01">
+                            <input class="form-check-input spin" type="checkbox">
+                            <label class="form-check-label" for="flexCheckDefault">Spin</label>
+                            <select class="form-select form-select-sm">
+                                <option onclick="speed('protein-01', 0.5)" selected>0.5</option>
+                                <option onclick="speed('protein-01', 1.0)">1.0</option>
+                                <option onclick="speed('protein-01', 1.5)">1.5</option>
+                                <option onclick="speed('protein-01', 2.0)">2.0</option>
+                                <option onclick="speed('protein-01', 2.5)">2.5</option>
+                                <option onclick="speed('protein-01', 3.0)">3.0</option>
+                                <option onclick="speed('protein-01', 3.5)">3.5</option>
+                                <option onclick="speed('protein-01', 4.0)">4.0</option>
+                            </select>
+                            <label>Speed</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDB data displayed here. -->
+                <div class="pdb-details">
+                    <h2><strong id="pdbid-protein-01"></strong></h2>
+                    <h5><strong id="header-protein-01"></strong></h5>
+                    <p id="title-protein-01" style="font-size: 18px;"></p>
+                    <button id="download-pdb" type="button" class="btn btn-success btn-sm opt">Download PDB</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="title">
+                    <h2><strong>Molecular Visualization with WebGL</strong></h2>
+                </div>
+                <img src="../images/research/3dmol-example.png" style="width: 25%; max-width: 450px; min-width: 250px; display: inline-block; vertical-align: top;">
+                <div style="display: inline-block; width: 74%; max-width: 800px; vertical-align: top; text-align: start; padding-left: 15px;">
+                    <p style="font-size: 20px;">Molecular visualization is an essential tool for computational chemists
+                        and biologists. Due to the demanding nature of three-dimensional
+                        (3D) graphics, most molecular viewers are desktop applications. The
+                        need to install specialized applications and, in some cases, the restrictive 
+                        nature of the software licenses, introduces hurdles to the sharing
+                        of molecular data. Unlike a desktop application, a standards-based client-side 
+                        web application comes pre-installed with every computer and
+                        mobile device with a modern web browser and can be seamlessly integrated 
+                        into online environments for accessing and analyzing molecular data.</p>
+                </div>
+            </div>
+
+            <div class="section">
+
+                <div class="title">
+                    <h2><strong>Side-by-Side 3D Displays</strong></h2>
+                </div>
+
+                <!-- Container 1 -->
+                <div id="container-01" class="container">
+                    <div class="title top" style="text-align: end;">
+                        <p id="pdb-error02" class="pdb-error" hidden="hidden">PDB id not found.</p>
+                        <div class="indv-search">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control pdbid form-control-sm" placeholder="PDB id" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text search" style="height: 31px;" 3dview="protein-02" err="pdb-error02">search</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="protein-02" class="style-protein"></div>
+                    <!-- Controls start here -->
+                    <div class="title controls">
+                        <div class="control-row container-info">
+                            <p><strong id="pdbid-protein-02"></strong></p>
+                            <p id="title-protein-02"></p>
+                        </div>
+                        <!-- HETATM Buttons -->
+                        <div class="control-row" 3dview="protein-02">
+                            <div id="hetatm-protein-02" class="hetatm">
+                                <input class="form-check-input check" type="checkbox" id="check-protein-02" hetatm="" checked hidden>
+                                <label class="form-check-label" for="flexRadioDefault2"></label>
+                            </div>
+                        </div>
+                        <!-- Chain Style Buttons -->
+                        <div class="control-row">
+                            <input id="display-protein-02" class="form-check-input" onclick="chainDisplay('protein-02')" type="checkbox" checked>
+                            <select id="chains-protein-02" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option id="chain" onclick="chain('protein-02', 'ALL')" selected>ALL</option>
+                            </select>
+                            <label>Chain</label>
+                            <div class="btn-group" role="group" aria-label="Basic example" 3dview="protein-02">
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=0>Line</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=1>Cross</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=2>Stick</button>
+                                <div class="btn-group" role="group" 3dview="protein-02">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cartoon
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=3>default</a></li>
+                                        <li><a class="dropdown-item style-btn" value=4>trace</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-02">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sphere
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 0.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.0</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 2.0</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-02" typeStyle="{}">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Color
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=6>spectrum</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>salmon</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>red</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightblue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>blue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightgreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>seagreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>green</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightyellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>yellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>mediumpurple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>purple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>violet</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>pink</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>grey</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>black</a></li>
+                                </div>
+                                <button id ="label-protein-02" type="button" class="btn btn-light btn-sm style-btn" cntrl=0 value=7>Labels</button>
+                            </div>
+                        </div>
+                        <!-- Spin Control Buttons -->
+                        <div class="control-row" 3dview="protein-02">
+                            <input class="form-check-input spin" type="checkbox">
+                            <label class="form-check-label" for="flexCheckDefault">Spin</label>
+                            <select class="form-select form-select-sm">
+                                <option onclick="speed('protein-02', 0.5)" selected>0.5</option>
+                                <option onclick="speed('protein-02', 1.0)">1.0</option>
+                                <option onclick="speed('protein-02', 1.5)">1.5</option>
+                                <option onclick="speed('protein-02', 2.0)">2.0</option>
+                                <option onclick="speed('protein-02', 2.5)">2.5</option>
+                                <option onclick="speed('protein-02', 3.0)">3.0</option>
+                                <option onclick="speed('protein-02', 3.5)">3.5</option>
+                                <option onclick="speed('protein-02', 4.0)">4.0</option>
+                            </select>
+                            <label>Speed</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container 2 -->
+                <div id="container-02" class="container">
+                    <div class="title top" style="text-align: end;">
+                        <p id="pdb-error03" class="pdb-error" hidden="hidden">PDB id not found.</p>
+                        <div class="indv-search">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control pdbid form-control-sm" placeholder="PDB id" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text search" style="height: 31px;" 3dview="protein-03" err="pdb-error03">search</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="protein-03" class="style-protein"></div>
+                    <!-- Controls start here -->
+                    <div class="title controls">
+                        <div class="control-row container-info">
+                            <p><strong id="pdbid-protein-03"></strong></p>
+                            <p id="title-protein-03"></p>
+                        </div>
+                        <!-- HETATM Buttons -->
+                        <div class="control-row" 3dview="protein-03">
+                            <div id="hetatm-protein-03" class="hetatm">
+                                <input class="form-check-input check" type="checkbox" id="check-protein-03" hetatm="" checked hidden>
+                                <label class="form-check-label" for="flexRadioDefault2"></label>
+                            </div>
+                        </div>
+                        <!-- Chain Style Buttons -->
+                        <div class="control-row">
+                            <input id="display-protein-03" class="form-check-input" onclick="chainDisplay('protein-03')" type="checkbox" checked>
+                            <select id="chains-protein-03" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option id="chain" onclick="chain('protein-03', 'ALL')" selected>ALL</option>
+                            </select>
+                            <label>Chain</label>
+                            <div class="btn-group" role="group" aria-label="Basic example" 3dview="protein-03">
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=0>Line</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=1>Cross</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=2>Stick</button>
+                                <div class="btn-group" role="group" 3dview="protein-03">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cartoon
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=3>default</a></li>
+                                        <li><a class="dropdown-item style-btn" value=4>trace</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-03">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sphere
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 0.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.0</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 2.0</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-03" typeStyle="{}">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Color
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=6>spectrum</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>salmon</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>red</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightblue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>blue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightgreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>seagreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>green</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightyellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>yellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>mediumpurple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>purple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>violet</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>pink</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>grey</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>black</a></li>
+                                </div>
+                                <button id ="label-protein-03" type="button" class="btn btn-light btn-sm style-btn" cntrl=0 value=7>Labels</button>
+                            </div>
+                        </div>
+                        <!-- Spin Control Buttons -->
+                        <div class="control-row" 3dview="protein-03">
+                            <input class="form-check-input spin" type="checkbox">
+                            <label class="form-check-label" for="flexCheckDefault">Spin</label>
+                            <select class="form-select form-select-sm">
+                                <option onclick="speed('protein-03', 0.5)" selected>0.5</option>
+                                <option onclick="speed('protein-03', 1.0)">1.0</option>
+                                <option onclick="speed('protein-03', 1.5)">1.5</option>
+                                <option onclick="speed('protein-03', 2.0)">2.0</option>
+                                <option onclick="speed('protein-03', 2.5)">2.5</option>
+                                <option onclick="speed('protein-03', 3.0)">3.0</option>
+                                <option onclick="speed('protein-03', 3.5)">3.5</option>
+                                <option onclick="speed('protein-03', 4.0)">4.0</option>
+                            </select>
+                            <label>Speed</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container 3 -->
+                <div id="container-03" class="container">
+                    <div class="title top" style="text-align: end;">
+                        <p id="pdb-error04" class="pdb-error" hidden="hidden">PDB id not found.</p>
+                        <div class="indv-search">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control pdbid form-control-sm" placeholder="PDB id" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text search" style="height: 31px;" 3dview="protein-04" err="pdb-error04">search</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="protein-04" class="style-protein"></div>
+                    <!-- Controls start here -->
+                    <div class="title controls">
+                        <div class="control-row container-info">
+                            <p><strong id="pdbid-protein-04"></strong></p>
+                            <p id="title-protein-04"></p>
+                        </div>
+                        <!-- HETATM Buttons -->
+                        <div class="control-row" 3dview="protein-04">
+                            <div id="hetatm-protein-04" class="hetatm">
+                                <input class="form-check-input check" type="checkbox" id="check-protein-04" hetatm="" checked hidden>
+                                <label class="form-check-label" for="flexRadioDefault2"></label>
+                            </div>
+                        </div>
+                        <!-- Chain Style Buttons -->
+                        <div class="control-row">
+                            <input id="display-protein-04" class="form-check-input" onclick="chainDisplay('protein-04')" type="checkbox" checked>
+                            <select id="chains-protein-04" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option id="chain" onclick="chain('protein-04', 'ALL')" selected>ALL</option>
+                            </select>
+                            <label>Chain</label>
+                            <div class="btn-group" role="group" aria-label="Basic example" 3dview="protein-04">
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=0>Line</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=1>Cross</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=2>Stick</button>
+                                <div class="btn-group" role="group" 3dview="protein-04">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cartoon
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=3>default</a></li>
+                                        <li><a class="dropdown-item style-btn" value=4>trace</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-04">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sphere
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 0.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.0</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 2.0</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-04" typeStyle="{}">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Color
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=6>spectrum</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>salmon</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>red</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightblue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>blue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightgreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>seagreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>green</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightyellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>yellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>mediumpurple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>purple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>violet</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>pink</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>grey</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>black</a></li>
+                                </div>
+                                <button id ="label-protein-04" type="button" class="btn btn-light btn-sm style-btn" cntrl=0 value=7>Labels</button>
+                            </div>
+                        </div>
+                        <!-- Spin Control Buttons -->
+                        <div class="control-row" 3dview="protein-04">
+                            <input class="form-check-input spin" type="checkbox">
+                            <label class="form-check-label" for="flexCheckDefault">Spin</label>
+                            <select class="form-select form-select-sm">
+                                <option onclick="speed('protein-04', 0.5)" selected>0.5</option>
+                                <option onclick="speed('protein-04', 1.0)">1.0</option>
+                                <option onclick="speed('protein-04', 1.5)">1.5</option>
+                                <option onclick="speed('protein-04', 2.0)">2.0</option>
+                                <option onclick="speed('protein-04', 2.5)">2.5</option>
+                                <option onclick="speed('protein-04', 3.0)">3.0</option>
+                                <option onclick="speed('protein-04', 3.5)">3.5</option>
+                                <option onclick="speed('protein-04', 4.0)">4.0</option>
+                            </select>
+                            <label>Speed</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container 4 -->
+                <div id="container-04" class="container">
+                    <div class="title top" style="text-align: end;">
+                        <p id="pdb-error05" class="pdb-error" hidden="hidden">PDB id not found.</p>
+                        <div class="indv-search">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control pdbid form-control-sm" placeholder="PDB id" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <span class="input-group-text search" style="height: 31px;" 3dview="protein-05" err="pdb-error05">search</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="protein-05" class="style-protein"></div>
+                    <!-- Controls start here -->
+                    <div class="title controls">
+                        <div class="control-row container-info">
+                            <p><strong id="pdbid-protein-05"></strong></p>
+                            <p id="title-protein-05"></p>
+                        </div>
+                        <!-- HETATM Buttons -->
+                        <div class="control-row" 3dview="protein-05">
+                            <div id="hetatm-protein-05" class="hetatm">
+                                <input class="form-check-input check" type="checkbox" id="check-protein-05" hetatm="" checked hidden>
+                                <label class="form-check-label" for="flexRadioDefault2"></label>
+                            </div>
+                        </div>
+                        <!-- Chain Style Buttons -->
+                        <div class="control-row">
+                            <input id="display-protein-05" class="form-check-input" onclick="chainDisplay('protein-05')" type="checkbox" checked>
+                            <select id="chains-protein-05" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option id="chain" onclick="chain('protein-05', 'ALL')" selected>ALL</option>
+                            </select>
+                            <label>Chain</label>
+                            <div class="btn-group" role="group" aria-label="Basic example" 3dview="protein-05">
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=0>Line</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=1>Cross</button>
+                                <button type="button" class="btn btn-light btn-sm style-btn" value=2>Stick</button>
+                                <div class="btn-group" role="group" 3dview="protein-05">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cartoon
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=3>default</a></li>
+                                        <li><a class="dropdown-item style-btn" value=4>trace</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-05">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sphere
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 0.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.0</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 1.5</a></li>
+                                        <li><a class="dropdown-item style-btn" value=5>radius: 2.0</a></li>
+                                </div>
+                                <div class="btn-group" role="group" 3dview="protein-05" typeStyle="{}">
+                                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Color
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <li><a class="dropdown-item style-btn" value=6>spectrum</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>salmon</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>red</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightblue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>blue</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightgreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>seagreen</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>green</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>lightyellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>yellow</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>mediumpurple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>purple</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>violet</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>pink</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>grey</a></li>
+                                        <li><a class="dropdown-item style-btn" value=6>black</a></li>
+                                </div>
+                                <button id ="label-protein-05" type="button" class="btn btn-light btn-sm style-btn" cntrl=0 value=7>Labels</button>
+                            </div>
+                        </div>
+                        <!-- Spin Control Buttons -->
+                        <div class="control-row" 3dview="protein-05">
+                            <input class="form-check-input spin" type="checkbox">
+                            <label class="form-check-label" for="flexCheckDefault">Spin</label>
+                            <select class="form-select form-select-sm">
+                                <option onclick="speed('protein-05', 0.5)" selected>0.5</option>
+                                <option onclick="speed('protein-05', 1.0)">1.0</option>
+                                <option onclick="speed('protein-05', 1.5)">1.5</option>
+                                <option onclick="speed('protein-05', 2.0)">2.0</option>
+                                <option onclick="speed('protein-05', 2.5)">2.5</option>
+                                <option onclick="speed('protein-05', 3.0)">3.0</option>
+                                <option onclick="speed('protein-05', 3.5)">3.5</option>
+                                <option onclick="speed('protein-05', 4.0)">4.0</option>
+                            </select>
+                            <label>Speed</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h5><strong>Resources</strong></h5>
+                <p>RCSB PDB(Protein Data Bank): <a style="font-style: italic;">Biological macromolecular structures enabling breakthroughs in research and education.</a> <a href="https://www.rcsb.org/">Visit</a></p>
+                <p>3Dmol: <a style="font-style: italic;">A modern, object-oriented JavaScript library for visualizing molecular data.</a> <a href="http://3dmol.csb.pitt.edu/">Visit</a></p>
+                <p>N. Rego and D. Koes (2015) 3Dmol.js molecular visualization with webgl. <a style="font-style: italic;">Bioinformatics, 31(8)</a> 1322-1324</p>
+            </div>
+
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+        <script src="../static/3dmol.js"></script>
+        <script>
+
+            // Initalize bottom 3D Displays
+            element = $('#protein-02');
+            viewer = new Viewer("protein-02", element);
+            viewers.push(viewer);
+
+            element = $('#protein-03');
+            viewer = new Viewer("protein-03", element);
+            viewers.push(viewer);
+
+            element = $('#protein-04');
+            viewer = new Viewer("protein-04", element);
+            viewers.push(viewer);
+
+            element = $('#protein-05');
+            viewer = new Viewer("protein-05", element);
+            viewers.push(viewer);
+
+            // Download current PDB.
+            $("#download-pdb").on('click', function() {
+                window.location.replace("https://files.rcsb.org/download/" + searched + ".pdb");   
+            });
+
+
+            // Gets selected PDB from table.
+            $(".pdb").on('click', function() {
+                $(".pdb-error").prop("hidden", true);
+                let value = $(this).attr("value");
+                getPDB("protein-01", value, "");
+            });
+
+
+            // When enter key is pressed. Activates search button.
+            $(".pdbid").on('keyup', function (e) {
+                if (e.key === 'Enter' || e.keyCode === 13) {
+                    $(this).siblings(".search").click();
+                }
+            });
+
+
+            // Search button. Gets searched for PDB.
+            $(".search").on('click', function() {
+                $(".pdb-error").prop("hidden", true);
+                $(".pdb-error").siblings(".pdb-file-nm").prop("hidden", true);
+                let value = $(this).siblings("input").val().replace(/\s/g, '').toUpperCase();
+                let viewer_id = $(this).attr("3dview");
+                let errmsg =  $(this).attr("err");
+
+                getPDB(viewer_id, value, errmsg);
+            });
+
+
+            // Upload button. Activates file input.
+            $(".opt").on('click', function() {
+                let target = $(this).attr("3dview");
+                $("#file-" + target).click();
+            });
+
+
+            // Controls Sidebar open and close function.
+            let cntrl = 0;
+            $("#sidebar-btn").on("click", function() {
+                if (cntrl == 0) {
+                    $(this).css({"margin-right": "-100px", "background-image": "linear-gradient(#04488a, #033d75)"});
+                    $(this).html("Open");
+                    $("#sidebar").css("margin-left", "-320px");
+                    $("#dashboard").css("padding-left", "60px");
+                    cntrl++;
+                }
+                else {
+                    $(this).css({"margin-right": "0px", "background-image": "none"});
+                    $(this).html("Close");
+                    $("#sidebar").css("margin-left", "0px");
+                    $("#dashboard").css("padding-left", "320px");
+                    cntrl = 0;
+                }
+            });
+
+
+            let current_clones = 1;
+            $("#container-02").hide();
+            $("#container-03").hide();
+            $("#container-04").hide();
+
+            // Clone containers to view side by side.
+            function displays(clones) {
+                if (clones == current_clones)
+                    return;
+                else if (clones > current_clones) {
+                    for (let i=current_clones+1; i <= clones; i++) {
+                        $("#container-0" + i).show();
+                    }
+                    current_clones = clones;
+                }
+                else {
+                    for (let i=current_clones; i > clones; i--) {
+                    $("#container-0"+i).hide();
+                    }
+                    current_clones = clones;
+                }
+            }
+        </script>
+    </body>
+</html>
