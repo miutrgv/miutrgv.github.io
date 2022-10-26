@@ -21,42 +21,7 @@
 </head>
     <body>
 
-        <nav class="navbar fixed-top navbar-expand-lg ">
-            <a class="navbar-brand" href="/">
-              <img src="images/navbar/miutrgv_navbar.svg" width="190px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"><img src="images/navbar/reorder.png"/></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="/">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="research.html" id="current">Research</a>
-                  </li>
-                  <li class="nav-item">
-                      <a id="people-link" class="nav-link" href="people.html">People</a>
-                      <div id="drop-down">
-                          <a class="nav-link" href="people.html#research-teams">Research Teams</a>
-                          <a class="nav-link" href="people.html#collaborators">Collaborators</a>
-                          <a class="nav-link" href="people.html#faculty">Faculty</a>
-                          <a class="nav-link" href="people.html#alumni">Alumni</a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="publications.html">Publications</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="sponsors.html">Sponsors</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                  </li>
-                </ul>
-            </div>
-        </nav>
+        <nav id="mi-navbar"></nav>
 
         <div class="pg-title">
 
@@ -75,7 +40,7 @@
 
           <span id="start" type="hidden"></span>
 
-          <div id="2" data-aos="zoom-in-up" class="research-item">
+          <div id="humanoid" data-aos="zoom-in-up" class="research-item">
             <img class="research-img" src="images/research/humanoid.gif" />
             <div class="research-item-body">
               <h5>Humanoid locomotion simulation using Reinforcement Learning (RL)</h5>
@@ -86,7 +51,7 @@
             </div>
           </div>
 
-          <div data-aos="zoom-in-up" class="research-item">
+          <div id="hea" data-aos="zoom-in-up" class="research-item">
             <img class="research-img" src="images/research/HEA.gif" />
             <div class="research-item-body">
               <h5>High Entropy Alloy property prediction using Deep NN and GAN</h5>
@@ -97,7 +62,7 @@
             </div>
           </div>
 
-          <div id="1" data-aos="zoom-in-up" class="research-item">
+          <div id="drugdiscovery" data-aos="zoom-in-up" class="research-item">
             <img class="research-img" src="images/research/biomarker.gif" />
             <div class="research-item-body">
               <h5>Structure-based Virtual Screening using RL</h5>
@@ -108,20 +73,20 @@
             </div>
           </div>
 
-          <div id="0" data-aos="zoom-in-up" class="research-item">
+          <div id="honeybee" data-aos="zoom-in-up" class="research-item">
             <img class="research-img" src="images/research/bees.gif" />
             <div class="research-item-body">
               <h5>Honey bee monitoring system</h5>
               <div class="overview">
                 <p><strong>Overview:</strong></p>
-                <p>Monitoring of honeybee population by recording bee hive's humidity, temperature, and bee activity us... <a href="research/bee-monitoring.html" ><strong class="ref-link">Read More</strong></a></p>
+                <p>The Honey Bee Monitoring System is a system designed to monitor the overall health of the honey... <a href="research/bee-monitoring.html" ><strong class="ref-link">Read More</strong></a></p>
                 <br>
                 <a class="ref-link-button" href="https://bee.utrgv.edu" >View Project</a>
               </div>
             </div>
           </div>
 
-          <div data-aos="zoom-in-up" class="research-item">
+          <div id="concrete" data-aos="zoom-in-up" class="research-item">
             <img class="research-img" src="images/research/fluid_simulation.gif" />
             <div class="research-item-body">
               <h5>Concrete conductivity simulation</h5>
@@ -132,15 +97,39 @@
             </div>
           </div>
 
-          <div data-aos="zoom-in-up" class="research-item">
+          <div id="poseed" data-aos="zoom-in-up" class="research-item">
             <img class="research-img" src="images/research/pose_estimation.gif" />
             <div class="research-item-body">
               <h5>Pose estimation</h5>
               <div class="overview">
                 <p><strong>Overview:</strong></p>
-                <p>Pose estimation is an education tool using class lecture recordings to determine quality of educato... <a  href="research/pose-estimation.html" ><strong class="ref-link">Read More</strong></a></p>
+                <p>Pose Estimation is a topic in computer vision focusing on analyzing object movement, specifically... <a  href="research/pose-estimation.html" ><strong class="ref-link">Read More</strong></a></p>
                 <br>
                 <a class="ref-link-button" href="https://bee.utrgv.edu/poseEstimation.html" >View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="vcore" data-aos="zoom-in-up" class="research-item">
+            <img class="research-img" src="images/research/forecasting.gif" />
+            <div class="research-item-body">
+              <h5>VCORE Emergency Management Tool</h5>
+              <div class="overview">
+                <p><strong>Overview:</strong></p>
+                <p>The VCORE Emergency Management Tool was designed to aid emergency management services... <a  href="research/vcore.html" ><strong class="ref-link">Read More</strong></a></p>
+                <br>
+                <a class="ref-link-button" href="https://vcore.utrgv.edu/" >View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="salinity" data-aos="zoom-in-up" class="research-item">
+            <img class="research-img" src="images/research/salinity.gif" />
+            <div class="research-item-body">
+              <h5>Rio Grande River Salinity Forecasting</h5>
+              <div class="overview">
+                <p><strong>Overview:</strong></p>
+                <p>Rio Grande River Salinity Forecasting aims to provide a 6 hour to 48 hour forecasting in salinity levels... <a  href="research/salinity-forecast.html" ><strong class="ref-link">Read More</strong></a></p>
               </div>
             </div>
           </div>
@@ -179,17 +168,15 @@
       </div>
         
 
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="static/navbar.js?01"></script>
+      <script> showNavbar("research"); </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script type="text/javascript" src="static/action.js?123"></script>
-      <script type="text/javascript" src="static/search_res.js"></script>
-
-      <script>
-        AOS.init();
-        $('.carousel').carousel('cycle');
-      </script>
+      <script> AOS.init(); </script>
+      <script type="text/javascript" src="static/action.js?03"></script>
+      <script type="text/javascript" src="static/search_res.js?01"></script>
 
     </body>
 </html>

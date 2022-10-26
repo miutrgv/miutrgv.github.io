@@ -12,42 +12,7 @@
 </head>
     <body>
 
-        <nav class="navbar fixed-top navbar-expand-lg ">
-            <a class="navbar-brand" href="../">
-              <img src="../images/navbar/miutrgv_navbar.svg" width="190px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"><img src="../images/navbar/reorder.png"/></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="../">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../research.html">Research</a>
-                  </li>
-                  <li class="nav-item">
-                      <a id="people-link" class="nav-link" href="../people.html">People</a>
-                      <div id="drop-down">
-                          <a class="nav-link" href="../people.html#research-teams">Research Teams</a>
-                          <a class="nav-link" href="../people.html#collaborators">Collaborators</a>
-                          <a class="nav-link" href="../people.html#faculty">Faculty</a>
-                          <a class="nav-link" href="../people.html#alumni">Alumni</a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../publications.html">Publications</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../sponsors.html">Sponsors</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../about.html">About Us</a>
-                  </li>
-                </ul>
-            </div>
-        </nav>
+        <nav id="mi-navbar"></nav>
 
         <div class="pg-title">
 
@@ -58,16 +23,26 @@
         <div id="research">  
 
             <div class="research-description">
-                <img src="../images/research/fluid_simulation.gif">
+                <img src="../images/research/concreteconductivity.png">
             </div>
             <div class="research-description">
                 <div id="research-description-text">
-                    <p>Concrete conductivity is the idea of bridging the top of the concrete to the bottom with Metal Fibers to monitor the concrete with an electric 
-                        current. This Concrete conductivity simulation is a tool developed to simulate the conductive pathing in a concrete mixture. This software 
-                        simulates metal fibers in a 3D environment to determine the conductivity and grouping behavior based on a variety of elements such as: fiber 
-                        length, fiber width, container size, and shape of container. We analyze the distribution of the metal fibers in the concrete mixture to determine 
-                        the conductive pathing of the metal fibers. By being able to analyze the distribution, we can determine the ideal volume of metal fibers needed to 
-                        achieve the goal.</p>
+                    <p>Concrete conductivity is the idea of bridging the top of the concrete to the bottom with Metal Fibers, as shown in the picture above, to then monitor 
+                      the concrete with an electric current.</p>
+                </div>
+            </div>
+            <div class="research-description">
+              <div class="research-description-image">
+                  <img src="../images/research/fluid_simulation.gif">
+              </div>
+            </div>
+            <div class="research-description">
+                <div class="research-description-text">
+                    <p>This Concrete conductivity simulation is a tool developed to simulate the conductive pathing in a concrete mixture. This software 
+                      simulates metal fibers in a 3D environment, as shown in the image above, to determine the conductivity and grouping behavior based on a variety of elements such as: fiber 
+                      length, fiber width, container size, and shape of container. We analyze the distribution of the metal fibers in the concrete mixture to determine 
+                      the conductive pathing of the metal fibers. By being able to analyze the distribution, we can determine the ideal volume of metal fibers needed to 
+                      achieve the goal.</p>
                 </div>
             </div>
             
@@ -105,17 +80,12 @@
       </div>
         
 
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="../static/navbar.js"></script>
+      <script> showNavbar("research-topic"); </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script type="text/javascript" src="../static/action.js?123"></script>
-      <script type="text/javascript" src="../static/search_res.js"></script>
-
-      <script>
-        AOS.init();
-        $('.carousel').carousel('cycle');
-      </script>
+      <script type="text/javascript" src="../static/action.js?02"></script>
 
     </body>
 </html>
