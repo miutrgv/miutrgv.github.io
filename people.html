@@ -1,544 +1,587 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>People</title>
-	<link rel="icon" href="images/navbar/miutrgv_logo.png?1" sizes="32x32" type="image/png">
+    <title>People</title>
+    <link rel="icon" href="images/navbar/miutrgv_logo.png?1" sizes="32x32" type="image/png">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="style/stylesheet.css">
-        <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/stylesheet.css">
+    <link rel="stylesheet" href="style/navbar.css">
 
-	<style>
-		td {vertical-align: top; width: 50%;}
-		table {margin: 5px 0;}
-		.left {padding-right: 3px;}
-		.right {padding-left: 3px;}
-		.member-info {position: relative;}
-		.member-email {position: absolute; bottom: 0; left: 0; width: 100%; margin-bottom: 15px;}
-		.team {vertical-align: top;}
-		.team-row {width: 100%;}
-	</style>
+    <style>
+        td {
+            vertical-align: top;
+            width: 50%;
+        }
+
+        table {
+            margin: 5px 0;
+        }
+
+        .left {
+            padding-right: 3px;
+        }
+
+        .right {
+            padding-left: 3px;
+        }
+
+        .member-info {
+            position: relative;
+        }
+
+        .member-email {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .team {
+            vertical-align: top;
+        }
+
+        .team-row {
+            width: 100%;
+        }
+    </style>
 
 </head>
-    <body>
 
-        <nav id="mi-navbar"></nav>
+<body>
 
-        <span id="research-teams" type="hidden"></span>
-        <div class="pg-title">
+    <nav id="mi-navbar"></nav>
 
-            <div class="input-group mb-3">
-                <input id="search-bar" type="text" class="form-control" placeholder="Input Name" aria-label="Input Name" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-dark" type="button" id="button-addon2">Search</button>
-                </div>
-            </div>
+    <span id="research-teams" type="hidden"></span>
+    <div class="pg-title">
 
-            <h2 class="display-4"> Members </h2>
-        </div> 
-
-        <div class="people">
-            <!-- Graduate Members -->
-            <div class="group">
-                <h3 class="member-classification">Graduate</h3>
-                <div style="width: 100%;">
-                    <span id="start" type="hidden"></span>
-                </div>
-                
-                <div id="castillo" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/daniel_castillo.png" />
-                    <div class="member-info">
-                        <h5>Daniel Castillo</h5>
-                        <p><strong>Graduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Fall 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="jose" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/jose_espinoza.jpg" />
-                    <div class="member-info">
-                        <h5>Jose Espinoza</h5>
-                        <p><strong>Graduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Spring 2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="joselito" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/joselito.jpg" />
-                    <div class="member-info">
-                        <h5>Joselito Guardado</h5>
-                        <p><strong>Graduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Web Developer</p>
-                            <p>Graduating Fall 2022</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="ashraful" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/md_ashraful_islam.jpeg" />
-                    <div class="member-info">
-                        <h5>Md Ashraful Islam</h5>
-                        <p><strong>Graduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>PGRA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Spring 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="christian" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/christian_narcia.jpg" />
-                    <div class="member-info">
-                        <h5>Christian Narcia</h5>
-                        <p><strong>Graduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Fall 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="gaukhar" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/gaukhar.JPG" />
-                    <div class="member-info">
-                        <h5>Gaukhar Nurbek</h5>
-                        <p><strong>Graduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Spring 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        
-        <div class="people" style="margin-top: -110px;">
-            <!-- Undergraduate Members -->
-            <div class="group">
-                <h3 class="member-classification">Undergraduate</h3>
-                <div style="width: 100%;">
-                    <span id="start" type="hidden"></span>
-                </div>
-                
-                <div id="belinda" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/belinda_alvarado.jpg" />
-                    <div class="member-info">
-                        <h5>Belinda Alvarado</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Fall 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="david" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/david_damken.jpeg" />
-                    <div class="member-info">
-                        <h5>David Damken</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Spring 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="guzman" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/erik_guzman.jpeg" />
-                    <div class="member-info">
-                        <h5>Erik Guzman</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Fall 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="masamba" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/daniel_masamba.jpg" />
-                    <div class="member-info">
-                        <h5>Daniel Masamba</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Spring 2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="angel" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/angel_peredo.jpg" />
-                    <div class="member-info">
-                        <h5>Angel Peredo</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Spring 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="jocell" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/jocell_rodriguez.jpg"/>
-                    <div class="member-info">
-                        <h5>Jocell Rodriguez</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Biology</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Fall 2022</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="diego" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/Diego Sariol.jpg" />
-                    <div class="member-info">
-                        <h5>Diego Sariol</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Reinforcement Learning Algorithms</p>
-                            <p>Graduating Fall 2022</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="juan" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/juan_velazquez.jpg" />
-                    <div class="member-info">
-                        <h5>Juan Velazquez</h5>
-                        <p><strong>Undergraduate Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RA</strong></p>
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Web Developer</p>
-                            <p>Graduating Spring 2024</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="input-group mb-3">
+            <input id="search-bar" type="text" class="form-control" placeholder="Input Name" aria-label="Input Name"
+                aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-dark" type="button" id="button-addon2">Search</button>
             </div>
         </div>
 
+        <h2 class="display-4"> Members </h2>
+    </div>
+
+    <div class="people">
+        <!-- Graduate Members -->
+        <div class="group">
+            <h3 class="member-classification">Graduate</h3>
+            <div style="width: 100%;">
+                <span id="start" type="hidden"></span>
+            </div>
+
+            <div id="castillo" data-aos="zoom-in-up" class="member">
+                <img src="images/people/daniel_castillo.png" />
+                <div class="member-info">
+                    <h5>Daniel Castillo</h5>
+                    <p><strong>Graduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Fall 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jose" data-aos="zoom-in-up" class="member">
+                <img src="images/people/jose_espinoza.jpg" />
+                <div class="member-info">
+                    <h5>Jose Espinoza</h5>
+                    <p><strong>Graduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Spring 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="joselito" data-aos="zoom-in-up" class="member">
+                <img src="images/people/joselito.jpg" />
+                <div class="member-info">
+                    <h5>Joselito Guardado</h5>
+                    <p><strong>Graduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Web Developer</p>
+                        <p>Graduating Fall 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ashraful" data-aos="zoom-in-up" class="member">
+                <img src="images/people/md_ashraful_islam.jpeg" />
+                <div class="member-info">
+                    <h5>Md Ashraful Islam</h5>
+                    <p><strong>Graduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>PGRA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Spring 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="christian" data-aos="zoom-in-up" class="member">
+                <img src="images/people/christian_narcia.jpg" />
+                <div class="member-info">
+                    <h5>Christian Narcia</h5>
+                    <p><strong>Graduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Fall 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gaukhar" data-aos="zoom-in-up" class="member">
+                <img src="images/people/gaukhar.JPG" />
+                <div class="member-info">
+                    <h5>Gaukhar Nurbek</h5>
+                    <p><strong>Graduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Spring 2023</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
 
-        <span id="collaborators" type="hidden"></span>
-        <div class="pg-title sub-title">
-            <h2 class="display-4"> Collaborators </h2>
-        </div>
+    <div class="people" style="margin-top: -110px;">
+        <!-- Undergraduate Members -->
+        <div class="group">
+            <h3 class="member-classification">Undergraduate</h3>
+            <div style="width: 100%;">
+                <span id="start" type="hidden"></span>
+            </div>
 
-        <div class="people">
-
-            <div id="collab" class="group">
-
-                <div id="zhixiang" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/zhixiang-chen.jpg" />
-                    <div class="member-info">
-                        <h5>Dr. Zhixiang Chen</h5>
-                        <p><strong>Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Graduate Program Coordinator</p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:zhixiang.chen@utrgv.edu" target="_top">Email Dr. Zhixiang Chen</a>
-                        </div>
+            <div id="belinda" data-aos="zoom-in-up" class="member">
+                <img src="images/people/belinda_alvarado.jpg" />
+                <div class="member-info">
+                    <h5>Belinda Alvarado</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Fall 2023</p>
                     </div>
                 </div>
+            </div>
 
-                <div id="mark" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/mark-chu.jpg" />
-                    <div class="member-info">
-                        <h5>Dr. Mark Chu</h5>
-                        <p><strong>Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Electrical and Computer Engineering</strong></p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:mark.chu@utrgv.edu" target="_top">Email Dr. Mark Chu</a>
-                        </div>
+            <div id="david" data-aos="zoom-in-up" class="member">
+                <img src="images/people/david_damken.jpeg" />
+                <div class="member-info">
+                    <h5>David Damken</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Spring 2023</p>
                     </div>
                 </div>
+            </div>
 
-                <div id="jungseok" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/jungseok-ho.png?123" />
-                    <div class="member-info">
-                        <h5>Dr. Jungseok Ho</h5>
-                        <p><strong>Associate Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Civil Engineering</strong></p>
-                            <p>Department Co-Chair</p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:jungseok.ho@utrgv.edu" target="_top">Email Dr. Jungsoek Ho</a>
-                        </div>
+            <div id="guzman" data-aos="zoom-in-up" class="member">
+                <img src="images/people/erik_guzman.jpeg" />
+                <div class="member-info">
+                    <h5>Erik Guzman</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Fall 2023</p>
                     </div>
                 </div>
+            </div>
 
-                <div id="seokmin" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/kang_seokmin.png" />
-                    <div class="member-info">
-                        <h5>Dr. Seokmin Kang</h5>
-                        <p><strong>Assistant Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Teaching and Learning</strong></p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:seokmin.kang@utrgv.edu" target="_top">Email Dr. Seokmin Kang</a>
-                        </div>
+            <div id="masamba" data-aos="zoom-in-up" class="member">
+                <img src="images/people/daniel_masamba.jpg" />
+                <div class="member-info">
+                    <h5>Daniel Masamba</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Spring 2024</p>
                     </div>
                 </div>
+            </div>
 
-                <div id="philip" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/park-philip.jpg" />
-                    <div class="member-info">
-                        <h5>Dr. Philip Park</h5>
-                        <p><strong>Assistant Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Civil Engineering</strong></p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:philip.park@utrgv.edu" target="_top">Email Dr. Philip Park</a>
-                        </div>
+            <div id="angel" data-aos="zoom-in-up" class="member">
+                <img src="images/people/angel_peredo.jpg" />
+                <div class="member-info">
+                    <h5>Angel Peredo</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Spring 2023</p>
                     </div>
                 </div>
+            </div>
 
-                <div id="joanne" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/joanne_rampersad.jpg" />
-                    <div class="member-info">
-                        <h5>Dr. Joanne Rampersad-Ammons</h5>
-                        <p><strong>Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Chemistry</strong></p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:joanne.rampersadammons@utrgv.edu" target="_top">Email Dr. Joanne Rampersad-Ammons</a>
-                        </div>
+            <div id="jocell" data-aos="zoom-in-up" class="member">
+                <img src="images/people/jocell_rodriguez.jpg" />
+                <div class="member-info">
+                    <h5>Jocell Rodriguez</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Biology</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Fall 2022</p>
                     </div>
                 </div>
+            </div>
 
-                <div id="emmett" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/emmett-tomai.jpg" />
-                    <div class="member-info">
-                        <h5>Dr. Emmett Tomai</h5>
-                        <p><strong>Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Department Chair</p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:emmett.tomai@utrgv.edu" target="_top">Email Dr. Emmett Tomai</a>
-                        </div>
+            <div id="diego" data-aos="zoom-in-up" class="member">
+                <img src="images/people/Diego Sariol.jpg" />
+                <div class="member-info">
+                    <h5>Diego Sariol</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Reinforcement Learning Algorithms</p>
+                        <p>Graduating Fall 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="juan" data-aos="zoom-in-up" class="member">
+                <img src="images/people/juan_velazquez.jpg" />
+                <div class="member-info">
+                    <h5>Juan Velazquez</h5>
+                    <p><strong>Undergraduate Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RA</strong></p>
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Web Developer</p>
+                        <p>Graduating Spring 2024</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <span id="faculty" type="hidden"></span>
-        <div class="pg-title sub-title">
-            <h2 class="display-4"> Faculty </h2>
-        </div>
+    </div>
 
-        <div class="people">
+    <span id="collaborators" type="hidden"></span>
+    <div class="pg-title sub-title">
+        <h2 class="display-4"> Collaborators </h2>
+    </div>
 
-            <div id="faculty" class="group">
+    <div class="people">
 
-                <div id="erik" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/erik.png" />
-                    <div class="member-info">
-                        <h5>Dr. Erik Enriquez</h5>
-                        <p><strong>Assistant Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Computer Science</strong></p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:erik.enriquez01@utrgv.edu" target="_top">Email Dr. Erik Enriquez</a>
-                        </div>
+        <div id="collab" class="group">
+
+            <div id="zhixiang" data-aos="zoom-in-up" class="member">
+                <img src="images/people/zhixiang-chen.jpg" />
+                <div class="member-info">
+                    <h5>Dr. Zhixiang Chen</h5>
+                    <p><strong>Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Graduate Program Coordinator</p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:zhixiang.chen@utrgv.edu" target="_top">Email Dr. Zhixiang Chen</a>
                     </div>
                 </div>
-
-                <div id="dongchul" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/kim.jpg" />
-                    <div class="member-info">
-                        <h5>Dr. Dongchul Kim</h5>
-                        <p><strong>Associate Professor</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Dept. of Computer Science</strong></p>
-                            <p>Principal Investigator</p>
-                        </div>
-                        <div class="member-email">
-                            <a href="mailto:dongchul.kim@utrgv.edu" target="_top">Email Dr. Dongchul Kim</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <span id="alumni" type="hidden"></span>
-        <div class="pg-title sub-title">
-            <h2 class="display-4"> Alumni </h2>
-        </div>
-
-        <div class="people">
-
-            <div id="collab" class="group">
-
-                <div id="osvaldo" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/osvaldo_headshot_b&w.jpeg" />
-                    <div class="member-info">
-                        <h5>Osvaldo Castellanos</h5>
-                        <p><strong>Software Developer</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>General Motors</strong></p>
-                            <p>Austin, TX</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="cesar" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/cesar_davila.jpg" />
-                    <div class="member-info">
-                        <h5>Cesar Davila</h5>
-                        <p><strong>Doctoral Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>University of Texas Austin</strong></p>
-                            <p>Austin, TX</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="martin" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/martin_flores.jpg" />
-                    <div class="member-info">
-                        <h5>Martin Flores</h5>
-                        <p><strong>Software Engineer</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>RENCI</strong></p>
-                            <p>Donna, TX</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="adolfo" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/adolfo_gonzalez.jpg" />
-                    <div class="member-info">
-                        <h5>Adolfo Gonzalez</h5>
-                        <p><strong>Software Engineer I</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Ultra Electronics, Advanced Tactical Systems</strong></p>
-                            <p>Austin, TX</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="armando" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/armando.jpeg" />
-                    <div class="member-info">
-                        <h5>Armando Herrera</h5>
-                        <p><strong>Science Software Developer</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Center for Astrophysics | Harvard & Smithsonian</strong></p>
-                            <p>Cambridge, MA</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="rysul" data-aos="zoom-in-up" class="member">
-                    <img src="images/people/rysul.jpg" />
-                    <div class="member-info">
-                        <h5>Md Rysul Kabir</h5>
-                        <p><strong>Doctoral Student</strong></p>
-                        <div class="member-info-align">
-                            <p><strong>Indiana University</strong></p>
-                            <p> Bloomington, IN</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
+            <div id="mark" data-aos="zoom-in-up" class="member">
+                <img src="images/people/mark-chu.jpg" />
+                <div class="member-info">
+                    <h5>Dr. Mark Chu</h5>
+                    <p><strong>Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Electrical and Computer Engineering</strong></p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:mark.chu@utrgv.edu" target="_top">Email Dr. Mark Chu</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="jungseok" data-aos="zoom-in-up" class="member">
+                <img src="images/people/jungseok-ho.png?123" />
+                <div class="member-info">
+                    <h5>Dr. Jungseok Ho</h5>
+                    <p><strong>Associate Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Civil Engineering</strong></p>
+                        <p>Department Co-Chair</p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:jungseok.ho@utrgv.edu" target="_top">Email Dr. Jungsoek Ho</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="seokmin" data-aos="zoom-in-up" class="member">
+                <img src="images/people/kang_seokmin.png" />
+                <div class="member-info">
+                    <h5>Dr. Seokmin Kang</h5>
+                    <p><strong>Assistant Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Teaching and Learning</strong></p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:seokmin.kang@utrgv.edu" target="_top">Email Dr. Seokmin Kang</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="philip" data-aos="zoom-in-up" class="member">
+                <img src="images/people/park-philip.jpg" />
+                <div class="member-info">
+                    <h5>Dr. Philip Park</h5>
+                    <p><strong>Assistant Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Civil Engineering</strong></p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:philip.park@utrgv.edu" target="_top">Email Dr. Philip Park</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="joanne" data-aos="zoom-in-up" class="member">
+                <img src="images/people/joanne_rampersad.jpg" />
+                <div class="member-info">
+                    <h5>Dr. Joanne Rampersad-Ammons</h5>
+                    <p><strong>Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Chemistry</strong></p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:joanne.rampersadammons@utrgv.edu" target="_top">Email Dr. Joanne
+                            Rampersad-Ammons</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="emmett" data-aos="zoom-in-up" class="member">
+                <img src="images/people/emmett-tomai.jpg" />
+                <div class="member-info">
+                    <h5>Dr. Emmett Tomai</h5>
+                    <p><strong>Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Department Chair</p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:emmett.tomai@utrgv.edu" target="_top">Email Dr. Emmett Tomai</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span id="faculty" type="hidden"></span>
+    <div class="pg-title sub-title">
+        <h2 class="display-4"> Faculty </h2>
+    </div>
+
+    <div class="people">
+
+        <div id="faculty" class="group">
+
+            <div id="erik" data-aos="zoom-in-up" class="member">
+                <img src="images/people/erik.png" />
+                <div class="member-info">
+                    <h5>Dr. Erik Enriquez</h5>
+                    <p><strong>Assistant Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Computer Science</strong></p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:erik.enriquez01@utrgv.edu" target="_top">Email Dr. Erik Enriquez</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dongchul" data-aos="zoom-in-up" class="member">
+                <img src="images/people/kim.jpg" />
+                <div class="member-info">
+                    <h5>Dr. Dongchul Kim</h5>
+                    <p><strong>Associate Professor</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Dept. of Computer Science</strong></p>
+                        <p>Principal Investigator</p>
+                    </div>
+                    <div class="member-email">
+                        <a href="mailto:dongchul.kim@utrgv.edu" target="_top">Email Dr. Dongchul Kim</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <span id="alumni" type="hidden"></span>
+    <div class="pg-title sub-title">
+        <h2 class="display-4"> Alumni </h2>
+    </div>
+
+    <div class="people">
+
+        <div id="collab" class="group">
+
+            <div id="osvaldo" data-aos="zoom-in-up" class="member">
+                <img src="images/people/osvaldo_headshot_b&w.jpeg" />
+                <div class="member-info">
+                    <h5>Osvaldo Castellanos</h5>
+                    <p><strong>Software Developer</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>General Motors</strong></p>
+                        <p>Austin, TX</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cesar" data-aos="zoom-in-up" class="member">
+                <img src="images/people/cesar_davila.jpg" />
+                <div class="member-info">
+                    <h5>Cesar Davila</h5>
+                    <p><strong>Doctoral Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>University of Texas Austin</strong></p>
+                        <p>Austin, TX</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="martin" data-aos="zoom-in-up" class="member">
+                <img src="images/people/martin_flores.jpg" />
+                <div class="member-info">
+                    <h5>Martin Flores</h5>
+                    <p><strong>Software Engineer</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>RENCI</strong></p>
+                        <p>Donna, TX</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="adolfo" data-aos="zoom-in-up" class="member">
+                <img src="images/people/adolfo_gonzalez.jpg" />
+                <div class="member-info">
+                    <h5>Adolfo Gonzalez</h5>
+                    <p><strong>Software Engineer I</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Ultra Electronics, Advanced Tactical Systems</strong></p>
+                        <p>Austin, TX</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="armando" data-aos="zoom-in-up" class="member">
+                <img src="images/people/armando.jpeg" />
+                <div class="member-info">
+                    <h5>Armando Herrera</h5>
+                    <p><strong>Science Software Developer</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Center for Astrophysics | Harvard & Smithsonian</strong></p>
+                        <p>Cambridge, MA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rysul" data-aos="zoom-in-up" class="member">
+                <img src="images/people/rysul.jpg" />
+                <div class="member-info">
+                    <h5>Md Rysul Kabir</h5>
+                    <p><strong>Doctoral Student</strong></p>
+                    <div class="member-info-align">
+                        <p><strong>Indiana University</strong></p>
+                        <p> Bloomington, IN</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
+    </div>
 
-        <div class="info">
 
-            <div class="links">
-              <h4> <abbr title="attribute">Links</abbr> </h4>
-              <ul>
-                <li><a href="https://docs.google.com/forms/d/1ZRyryZJkA9vpgFgDKnkqN6f4a9qFm5qH-gniSl0F0hM">Join the MI Team</a></li>
+    <div class="info">
+
+        <div class="links">
+            <h4> <abbr title="attribute">Links</abbr> </h4>
+            <ul>
+                <li><a href="https://docs.google.com/forms/d/1ZRyryZJkA9vpgFgDKnkqN6f4a9qFm5qH-gniSl0F0hM">Join the MI
+                        Team</a></li>
                 <li><a href="news.html">News Events</a></li>
                 <li><a href="https://bee.utrgv.edu">IntelliBeeHive</a></li>
                 <li><a href="https://bee.utrgv.edu/poseEstimation.html">Pose Estimation</a></li>
-              </ul>
-            </div>
-  
-            <div class="location-map">
-              <h4> <abbr title="attribute">Location</abbr> </h4>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14306.349603668754!2d-98.174096!3d26.3074725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cdc1bf01639f10c!2sUniversity%20of%20Texas%20Rio%20Grande%20Valley!5e0!3m2!1sen!2sus!4v1582001880791!5m2!1sen!2sus" width="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                
-              <p><a href="https://www.utrgv.edu/en-us/">University of Texas - Rio Grande Valley</a>, Edinburg TX 78539</p>
-              <p><a href="https://www.utrgv.edu/csci/index.htm">College of Engineering and Computer Science</a></p>
-            </div>
-  
-            <div class="nav-contact-us">
-              <h4> <abbr title="attribute">Contact Us</abbr> </h4>
-              <img id="utrgv-logo" src="images/navbar/utrgv-logo2.jpg">
-              <p>MI@UTRGV</p>
-              <p>EIEAB 2.210</p>
-              <p>Email: <a href="mailto:csci@utrgv.edu" target="_top">csci@utrgv.edu</a></p>    
-              <p>Phone: 956-665-2320</p>           
-            </div>
-  
+            </ul>
         </div>
-    
 
-        <script type="text/javascript" src="static/navbar.js"></script>
-        <script> showNavbar("people"); </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="static/action.js?02"></script>
-        <script type="text/javascript" src="static/search.js?12345"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <div class="location-map">
+            <h4> <abbr title="attribute">Location</abbr> </h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14306.349603668754!2d-98.174096!3d26.3074725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cdc1bf01639f10c!2sUniversity%20of%20Texas%20Rio%20Grande%20Valley!5e0!3m2!1sen!2sus!4v1582001880791!5m2!1sen!2sus"
+                width="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <p><a href="https://www.utrgv.edu/en-us/">University of Texas - Rio Grande Valley</a>, Edinburg TX 78539</p>
+            <p><a href="https://www.utrgv.edu/csci/index.htm">College of Engineering and Computer Science</a></p>
+        </div>
 
-        <script>
-            AOS.init();
-        </script>
+        <div class="nav-contact-us">
+            <h4> <abbr title="attribute">Contact Us</abbr> </h4>
+            <img id="utrgv-logo" src="images/navbar/utrgv-logo2.jpg">
+            <p>MI@UTRGV</p>
+            <p>EIEAB 2.210</p>
+            <p>Email: <a href="mailto:csci@utrgv.edu" target="_top">csci@utrgv.edu</a></p>
+            <p>Phone: 956-665-2320</p>
+        </div>
 
-    </body>
+    </div>
+
+
+    <script type="text/javascript" src="static/navbar.js"></script>
+    <script>
+        showNavbar("people");
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="static/action.js?02"></script>
+    <script type="text/javascript" src="static/search.js?12345"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
 </html>
