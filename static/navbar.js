@@ -4,6 +4,7 @@ function showNavbar(page) {
     var links = {
         home: '',
         research: '',
+        resources: '',
         people: '',
         public: '',
         sponsors: '',
@@ -44,6 +45,7 @@ function showNavbar(page) {
     if (page == "research-topic") {
         ul.innerHTML = '<li id="nav-opt1" class="nav-item"><a class="nav-link" href="../">Home</a></li>';
         ul.innerHTML += '<li id="nav-opt2" class="nav-item"><a id="current" class="nav-link" href="../research.html">Research</a></li>';
+        ul.innerHTML += '<li id="nav-opt7" class="nav-item"><a class="nav-link" href="../resources.html">Resources</a></li>';
         ul.innerHTML += '<li id="nav-opt3" class="nav-item"><a class="nav-link" href="../people.html">People</a></li>';
         ul.innerHTML += '<li id="nav-opt4" class="nav-item"><a class="nav-link" href="../publications.html">Publications</a></li>';
         ul.innerHTML += '<li id="nav-opt5" class="nav-item"><a class="nav-link" href="../sponsors.html">Sponsors</a></li>';
@@ -52,6 +54,7 @@ function showNavbar(page) {
     else {
         ul.innerHTML = '<li id="nav-opt1" class="nav-item"><a '+links.home+' class="nav-link" href="/">Home</a></li>';
         ul.innerHTML += '<li id="nav-opt2" class="nav-item"><a '+links.research+' class="nav-link" href="research.html">Research</a></li>';
+        ul.innerHTML += '<li id="nav-opt7" class="nav-item"><a '+links.resources+' class="nav-link" href="resources.html">Resources</a></li>';
         ul.innerHTML += '<li id="nav-opt3" class="nav-item"><a '+links.people+' class="nav-link" href="people.html">People</a></li>';
         ul.innerHTML += '<li id="nav-opt4" class="nav-item"><a '+links.public+' class="nav-link" href="publications.html">Publications</a></li>';
         ul.innerHTML += '<li id="nav-opt5" class="nav-item"><a '+links.sponsors+' class="nav-link" href="sponsors.html">Sponsors</a></li>';
