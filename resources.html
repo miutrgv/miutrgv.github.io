@@ -15,6 +15,15 @@
     .articles {
       margin-bottom: 50px;
     }
+    .about ul li::before {
+      content: "\25AA";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: #202020; /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: 0; /* Also needed for space (tweak if needed) */
+      list-style-type: square;
+    }
   </style>
 
 </head>
@@ -22,47 +31,112 @@
 
     <nav id="mi-navbar"></nav>
 
-    <div class="pg-title">
-        <h2 class="display-4"> Resources </h2>
-    </div>
-    <div id="publications">
+    <div class="about">
 
-      <div class="articles">
-        <h5 class="card-title">Research Lab</h5>
-        <p>
-          The Machine Intelligence Lab knows research in reinforcement learning can be at times tedious and exhausting.
-          In response, we provide our researchers with their own workspace where they have access to multiple technologies, including computers, printers, whiteboards, and projectors.
-          For training data sets we provide our researchers with multiple computers, each with a <strong>RTX 3080 GPU</strong>, and a GPU Cluster with <strong>4 GTX 1080 GPUs</strong> for larger data sets.
-          Need to print something in 3D? The MI Lab has an <strong>AnkerMake 3D Printer</strong> made available to all researchers. 
-          Alongside providing our researchers with the best technology, our lab is equipped with a refrigerator stocked with a variety of beverages.
-        </p>
-        <img src="images/resources/lab.jpg" width="800px">
-        <img src="images/resources/printer_rack.png" width="800px">
+      <div class="pg-title">
+          <h2 class="display-4"> Resources </h2>
       </div>
 
-      <div class="articles">
-        <h5 class="card-title">GPU Cluster</h5>
-        <p>
-          Training data sets with a single GPU can sometimes take up to hours or days depending on the size of the data set.
-          When data sets become too large, our researchers turn to our GPU Cluster.
-          Our GPU Cluster is equipped with <strong>4 GTX 1080 GPUs, Intel Core i7-9800X CPU, 128 GB of RAM,</strong> and <strong>1 TB of storage</strong>.
-          The cluster is made available through Jupyter Notebook, a web interface that allows researchers to interact with the cluster from their computers.
-        </p>
-        <img src="images/resources/gpu_cluster.jpg" width="800px">
+      <div class="about-data">
+        <div class="mi-about left-border">
+          <h4>Research Lab</h4>
+          <p>
+            Our research lab is equipped with a dynamic array of resources, our facility has multiple high-performance computers with RTX-3080 GPUs, ensuring unparalleled computational power for various tasks. 
+            Additionally, our GPU cluster, with 4 GTX-1080 GPUs, provides optimized parallel processing capabilities, complemented by our <a href="https://hpc.utrgv.edu">HPC Center</a>'s cluster with 32 A100 GPUs, ideal for intricate simulations and data-driven research.
+            Beyond computing prowess, our lab houses a 3D printer, for experimentation and prototyping in the realm of three-dimensional creations.
+          </p>
+          <p><strong>Lab Resources:</strong></p>
+          <ul>
+            <li>Multiple GPU Computers</li>
+            <li><a href="#gpu-cluster">GPU Cluster</a></li>
+            <li><a href="#hpcc-cluster">HPCC Cluster</a></li>
+            <li><a href="#3d-printer">3D Printer</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="articles">
-        <h5 class="card-title">HPC Center</h5>
-        <p>
-          Need something more powerful? Sometimes data sets can be too large for even the GPU Cluster to handle.
-          In times like these, we turn to our High Performance Computing (HPC) Center, where we have more powerful resources at our disposal.
-          Our HPC Center is equipped with <strong>8 A100 GPUs, 2 Intel Xeon Gold 6330 CPUs,</strong> and <strong>1 TB of DDR4 RAM</strong>.
-          With a memory bandwidth of <strong>67 GB/s Read BW</strong> and <strong>33 GB/s Write BW</strong>.
-        </p>
-        <img src="images/resources/hpc_cluster.jpg" width="800px">
+      <div class="about-data">
+        <h4 id="eieab-research-lab">Multiple GPU Computers</h4>
+        <img src="images/resources/lab-computers.jpeg" width="100%" />
+        <span id="gpu-cluster"></span>
       </div>
 
-    </div>
+      <div class="about-data">
+        <table>
+          <tr>
+            <td class="about-info right-border">
+              <h4>GPU Cluster</h4>
+              <p>
+                Training data sets on a single GPU can sometimes take hours or days depending on the size of the data set.
+                When data sets are too large, our researchers turn to our GPU Cluster.
+              </p>
+              <p><strong>Cluster Specs:</strong></p>
+              <ul>
+                <li><strong style="color: #707070;">GPU:</strong> NVIDIA GeForce GTX-1080</li>
+                <li><strong style="color: #707070;">Total GPUs:</strong> 4</li>
+                <li><strong style="color: #707070;">Memory (RAM):</strong> 128 GB</li>
+                <li><strong style="color: #707070;">Storage:</strong> 1 TB</li>
+              </ul>
+            </td>
+            <td class="about-info">
+              <img class="about-img-right" src="images/resources/gpu-cluster1.jpg" />
+            </td>
+          </tr>
+        </table>
+        <span id="hpcc-cluster"></span>
+      </div>
+      
+      <div class="about-data">
+        <table>
+          <tr>
+            <td class="about-info">
+              <img class="about-img-right" src="images/resources/hpcc-cluster.jpg" />
+            </td>
+            <td class="about-info left-border">
+              <h4>HPCC Cluster</h4>
+              <p>
+                When the GPU Cluster is not enough, our researchers turn to the <a href="https://hpc.utrgv.edu">HPC Center</a>'s cluster.
+                Our lab has access to all of the cluster's SXM nodes.
+              </p>
+              <p><strong>Cluster Specs:</strong></p>
+              <ul>
+                <li><strong style="color: #707070;">SXM Nodes:</strong> 4</li>
+                <li><strong style="color: #707070;">Node-to-Node Bandwidth:</strong> 200 Gb/s</li>
+              </ul>
+              <p><strong>SXM Node Specs:</strong></p>
+              <ul>
+                <li><strong style="color: #707070;">GPU:</strong> NVIDIA A100 Tensor Core</li>
+                <li><strong style="color: #707070;">Total GPUs:</strong> 8</li>
+                <li><strong style="color: #707070;">Memory (RAM):</strong> 640 GB</li>
+                <li><strong style="color: #707070;">GPU-to-GPU Bandwidth:</strong> 600 GB/s</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <span id="3d-printer"></span>
+      <div class="about-data">
+        <table>
+          <tr>
+            <td class="about-info right-border">
+              <h4>3D Printer</h4>
+              <p>
+                For fast and precise three-dimensional prototypes our researchers turn to our AnkerMake M5 3D Printer. 
+              </p>
+              <p><strong>Printer Specs:</strong></p>
+              <ul>
+                <li><strong style="color: #707070;">Print Precision:</strong> 0.1 mm</li>
+                <li><strong style="color: #707070;">Print Volume:</strong> 235x235x250 mm^3</li>
+                <li>Built-In AI Camera Monitoring</li>
+              </ul>
+            </td>
+            <td class="about-info">
+              <img class="about-img-right" src="images/resources/3d-printer.jpg" />
+            </td>
+          </tr>
+        </table>
+      </div>
 
 
       <div class="info">
@@ -92,6 +166,7 @@
           <p>Email: <a href="mailto:csci@utrgv.edu" target="_top">csci@utrgv.edu</a></p>    
           <p>Phone: 956-665-2320</p>           
         </div>
+      </div>
 
     </div>
         
