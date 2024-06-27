@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Benchmarks</title>
+	<link rel="icon" href="../images/navbar/miutrgv_logo.png?1" sizes="32x32" type="image/png">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style/stylesheet.css">
+  <link rel="stylesheet" href="../style/navbar.css">
+
+  <style>
+
+/*
+=====
+UIA-TIMELINE
+=====
+*/
+
+.uia-timeline__container{
+  display: var(--uia-timeline-display, grid);
+}
+
+.uia-timeline__groups{
+  display: var(--uia-timeline-groups-display, grid);;
+  gap: var(--uia-timeline-groups-gap, 1rem);
+}
+
+
+/*
+SKIN 3
+*/
+
+[data-uia-timeline-skin="3"]{
+  --_uia-timeline-line-color_default: #222;
+  --_uia-timeline-space: var(--uia-timeline-space, 1rem);
+  --_uia-timeline-line-thickness: var(--uia-timeline-line-thickness, 5px);
+  --_uia-timeline-point-line-position: var(--uia-timeline-point-line-position, 1rem);
+  --_uia-timeline-year-size: var(--uia-timeline-year-size, 3.5rem);
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__container{
+  position: relative;
+  gap: var(--uia-timeline-annual-sections-gap, 2.5rem);
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__line{
+  inline-size: var(--_uia-timeline-line-thickness);
+  block-size: 100%;
+  background-color: var(--uia-timeline-line-color, var(--_uia-timeline-line-color_default));
+
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__annual-sections{
+  display: grid;
+  gap: 2rem;
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__groups{
+  padding-inline-start: var(--_uia-timeline-space);
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__group{
+  position: relative;
+  isolation: isolate;
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__point{
+  background-color: var(--uia-timeline-point-background-color, #fff);
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__point::before{
+  content: "";
+  inline-size: 100%;
+  block-size: var(--_uia-timeline-line-thickness);
+  background-color: var(--uia-timeline-line-color, var(--_uia-timeline-line-color_default));
+
+  position: absolute;
+  inset-block-start: var(--_uia-timeline-point-line-position);
+  inset-inline-start: calc(-1 * var(--_uia-timeline-space));
+  z-index: -1;
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__month{
+  inline-size: fit-content;
+  padding: var(--uia-timeline-year-padding, .25rem .75rem);
+  background-color: var(--uia-timeline-year-background-color, var(--_uia-timeline-line-color_default));
+  color: var(--uia-timeline-year-color, #f0f0f0);
+  font-size: var(--uia-timeline-year-font-size, 1.2rem);
+}
+
+[data-uia-timeline-skin="3"] .uia-timeline__year{
+  box-sizing: border-box;
+	flex: none;
+	inline-size: 4rem;
+	block-size: 4rem;
+	
+	border: 
+		var(--uia-timeline-year-line-thickness, var(--_uia-timeline-line-thickness)) 
+		var(--uia-timeline-year-line-style, solid) 
+		var(--uia-timeline-line-color, var(--_uia-timeline-line-color_default));
+	border-radius: 50%;
+	
+	display: grid;
+	place-items: center;
+  background-color: var(--uia-timeline-year-background-color, var(--_uia-timeline-line-color_default));
+	
+	font-size: var(--uia-timeline-year-font-size, 1.2rem);
+  color: var(--uia-timeline-year-color, #f0f0f0);
+  margin-left: -30px;
+  z-index: 5;
+}
+
+[data-uia-timeline-adapter-skin-3="uia-card-skin-#1"]{
+  --uia-card-padding: var(--uia-timeline-point-padding, 1.5rem 1.5rem 1.25rem);
+  --uia-card-border-thickness:  var(--uia-timeline-point-border-thickness, 5px);
+	--uia-card-border-color: var(--uia-timeline-point-border-color, var(--_uia-timeline-line-color_default));		
+  --uia-card-background-color: var(--uia-timeline-point-background-color);  
+}
+
+
+/*
+=====
+RESET
+=====
+*/
+
+:where(.ra-link){
+  display: var(--ra-link-display, inline-flex);
+}
+
+:where(.ra-link[href]){
+  color: var(--ra-link-color, inherit);
+  text-decoration: var(--ra-link-text-decoration, none);
+}
+
+:where(.ra-heading){
+  margin-block-start: var(--ra-heading-margin-block-start, 0);
+  margin-block-end: var(--ra-heading-margin-block-end, 0);
+}
+
+/*
+=====
+HELPERS
+=====
+*/
+
+.ha-screen-reader{
+  width: var(--ha-screen-reader-width, 1px);
+  height: var(--ha-screen-reader-height, 1px);
+  padding: var(--ha-screen-reader-padding, 0);
+  border: var(--ha-screen-reader-border, none);
+
+  position: var(--ha-screen-reader-position, absolute);
+  clip-path: var(--ha-screen-reader-clip-path, rect(1px, 1px, 1px, 1px));
+  overflow: var(--ha-screen-reader-overflow, hidden);
+}
+
+/*
+=====
+UIA-CARD
+=====
+*/
+
+.uia-card__container{
+	display: var(--uia-card-display, grid);
+	gap: var(--uia-card-content-gap);
+}
+
+.uia-card__time-divider::before{
+  content: "—";
+  margin-inline: var(--uia-card-time-divider-margin-inline, .15rem);
+}
+
+[data-uia-card-skin="1"] .uia-card__container{
+  padding: var(--uia-card-padding, 1rem 1.75rem);
+  background-color: var(--uia-card-background-color);
+  border-radius: var(--uia-card-border-radius, 2px);
+}
+
+[data-uia-card-skin="1"] .uia-card__intro{
+  display: grid;
+  gap: var(--uia-card-intro-gap, 1rem);
+}
+
+[data-uia-card-skin="1"] .uia-card__time{
+  grid-row: 1 / 1;
+  inline-size: fit-content;
+  padding: var(--uia-card-time-padding, .25rem 1.25rem .25rem);
+  background-color: var(--uia-card-time-background-color, #f0f0f0);
+
+  font-weight: var(--uia-card-time-font-weight, 600);
+  font-size: var(--uia-card-time-font-size, 1rem);
+  text-transform: var(--uia-card-time-text-transform, uppercase);
+  color: var(--uia-card-time-color, currentColor);
+}
+
+[data-uia-card-skin="1"] .uia-card__type{
+  grid-row: 2 / 2;
+  inline-size: fit-content;
+  padding: var(--uia-card-time-padding, .25rem 1.25rem .25rem);
+  border-radius: 5px;
+
+  font-weight: var(--uia-card-time-font-weight, 500);
+  font-size: var(--uia-card-time-font-size, 0.75rem);
+  /* text-transform: var(--uia-card-time-text-transform, uppercase); */
+  color: var(--uia-card-time-color, currentColor);
+}
+
+[data-uia-card-skin="1"] .deadline{
+  background-color: #f2bcbc;
+}
+
+[data-uia-card-skin="1"] .conference{
+  background-color: #c2e4f5;
+}
+
+[data-uia-card-skin="1"] h3{
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+[data-uia-card-skin="1"][data-uia-card-mod="1"] .uia-card__container{
+	border-inline-start:	var(--uia-card-border-thickness, 5px) var(--uia-card-border-style, solid) var(--uia-card-border-color, currentColor);
+	box-shadow: var(--uia-card-box-shadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+}
+
+[data-uia-card-skin="1"][data-uia-card-mod="1"] .uia-card__container:hover{
+	border-inline-start: 5px solid #F05023;
+}
+
+/*
+=====
+UIA-CONTROL
+=====
+*/
+
+.uia-control__group {
+	cursor: var(--uia-control-cursor, var(--_uia-control-cursor, pointer));	
+	line-height: var(--uia-control-line-height, 1);
+}
+
+.uia-control {
+	--_uia-control-padding_default: 0;
+
+	--_uia-control-border-width: var(--uia-control-border-width);
+	--_uia-control-border-style: var(--uia-control-border-style, solid);
+	--_uia-control-border-color: var(--uia-control-border-color, currentColor);
+
+	--_uia-control-padding: var(--uia-control-padding,
+														var(
+															--uia-control-padding-block-start,
+															var(--_uia-control-padding_default)
+														)
+														var(
+															--uia-control-padding-inline-end,
+															var(--_uia-control-padding_default)
+														)
+														var(
+															--uia-control-padding-block-end, 
+															var(--_uia-control-padding_default)
+														)
+														var(
+															--uia-control-padding-inline-start,
+															var(--_uia-control-padding_default)
+														)
+													);
+	--_uia-control-border: var(--_uia-control-border-width) var(--_uia-control-border-style) var(--_uia-control-border-color);
+	--_uia-control-border-radius: var(--uia-control-border-radius, .25rem);
+}
+
+.uia-control__group {
+	display: var(--uia-control-display, inline-flex);
+	gap: var(--uia-control-gap, .5rem);
+	
+	padding: var(--_uia-control-padding);
+
+	border: var(--_uia-control-border);
+	border-radius: var(--_uia-control-border-radius);
+	background-image: linear-gradient(
+		var(--uia-control-background-degree, 135deg),
+		var(
+			--uia-control-background-start-color,
+			var(--uia-control-background-color)
+		) var(--uia-control-background-start-position, 0),
+		var(
+			--uia-control-background-end-color,
+			var(--uia-control-background-color)
+		) var(--uia-control-background-end-position, 100%)
+	);
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+:root{
+  --uia-timeline-line-color: #202020;
+  --uia-timeline-dot-color: #202020;
+  --uia-timeline-arrow-color: #202020;
+  --uia-timeline-line-thickness: 5px;
+  --uia-timeline-point-border-color: #202020;
+  --uia-timeline-group-padding: 1.5rem 1.5rem 1.25rem;
+}
+
+.timeline-5-2 {
+	--uia-timeline-line-mask-color: #f0f0f0
+}
+
+[data-uia-timeline-skin="3"]{
+	--uia-timeline-year-background-color: #202020;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  color: #222;
+
+  background-color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+p:last-child{
+  margin-bottom: 0;
+}
+
+.page{
+	box-sizing: border-box;
+  inline-size: min(100%, 90ch);
+  padding: 5rem 2rem 3rem;
+  margin-inline: auto;
+}
+
+.linktr{
+  --uia-control-background-color: rgb(209, 246, 255);
+  --uia-control-border-radius: 2rem;
+  --uia-control-padding: .75rem 1.5rem;
+  --uia-control-border-width: 1px;
+  --uia-control-border-color: rgb(209, 246, 255);
+  
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+  text-align: center;
+}
+
+.linktr__goal{ 
+  box-shadow: rgb(8 49 112 / 24%) 0 2px 8px 0;  
+}
+  </style>
+
+</head>
+    <body>
+
+      <nav id="mi-navbar"></nav>
+
+      <div class="about">
+
+        <div class="pg-title">
+            <h2 class="display-4"> Benchmarks </h2>
+        </div>
+  
+        <div class="about-data" style="margin-bottom: 0;">
+          <div class="mi-about left-border">
+            <h4>Conferences</h4>
+            <ul>
+              <li>- 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (<a href="https://iros2024-abudhabi.org/">IROS-24</a>)</li>
+              <li>- 2024 23rd International Conference on Machine Learning and Applications (<a href="https://www.icmla-conference.org/icmla24/keydates.html">ICMLA-24</a>)</li>
+              <li>- 2025 39th AAAI Conference on Artificial Intelligence (<a href="https://aaai.org/conference/aaai/aaai-25/">AAAI-25</a>)</li>
+              <li>- 2025 IEEE International Conference on Robotics & Automation (<a href="https://2025.ieee-icra.org/">ICRA-25</a>)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="page" data-uia-timeline-skin="3" data-uia-timeline-adapter-skin-3="uia-card-skin-#1">
+          <div class="uia-timeline">
+            <div class="uia-timeline__container">
+              <div class="uia-timeline__line"></div>
+              <!-- 2024 August -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__year" aria-hidden="true">2024</span>
+                <span class="uia-timeline__month" aria-hidden="true">July</span>
+                <div class="uia-timeline__groups">
+                  <!-- 31 July -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-2">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">ICMLA-24</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-07-31">
+                              <span class="uia-card__day">31 July</span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type deadline">Deadline</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Main conference paper submission deadline.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- 31 July -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-2">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">IROS-24</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-07-31">
+                              <span class="uia-card__day">31 July</span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type deadline">Deadline</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Paper submission deadline.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <!-- 2024 August -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">August</span>
+                <div class="uia-timeline__groups">
+                  <!-- 7 August -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-2">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">AAAI-25</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-08-07">
+                              <span class="uia-card__day">7 Aug</span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type deadline">Deadline</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Abstracts due at 11:59 PM UTC-12</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- 15 August -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-2">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">AAAI-25</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-08-15">
+                              <span class="uia-card__day">15 Aug</span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type deadline">Deadline</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Full papers due at 11:59 PM UTC-12</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- 31 August -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-2">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">ICMLA-24</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-08-31">
+                              <span class="uia-card__day">31 Aug</span>
+                            </time>
+                          </span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Main conference paper notification of acceptance.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <!-- 2024 September -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">September</span>
+                <div class="uia-timeline__groups">
+                  <!-- 15 September -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-3">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">ICRA-25</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-12-18">
+                              <span class="uia-card__day">15 Sept</span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type deadline">Deadline</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Paper submission deadline.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <!-- 2024 October -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">October</span>
+                <div class="uia-timeline__groups">
+                  <!-- 15 October -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-3">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">IROS-24</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-12-18">
+                              <span class="uia-card__day">14 - 18 Oct</span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type conference">Conference</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024) in Abu Dhabi ,UAE.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <!-- 2024 November -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">November</span>
+                <div class="uia-timeline__groups">
+                  <!-- October -->
+                </div>
+              </div>
+              <!-- 2024 December -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">December</span>
+                <div class="uia-timeline__groups">
+                  <!-- 9 December -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-3">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">AAAI-25</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-12-09">
+                              <span class="uia-card__day">9 Dec</span>
+                            </time>
+                          </span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Notification of final acceptance or rejection.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- 18 December -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-3">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">ICMLA-24</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2024-12-18">
+                              <span class="uia-card__day">18 - 20 Dec</span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type conference">Conference</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>2024 23rd International Conference on Machine Learning and Applications (ICMLA-24) in Miami, Florida.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <!-- 2025 January -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__year" aria-hidden="true">2025</span>
+                <span class="uia-timeline__month" aria-hidden="true">January</span>
+                <div class="uia-timeline__groups">
+                  <!-- 31 January -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-3">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">ICRA-25</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2014-07-14">
+                              <span class="uia-card__day">31 Jan</span>
+                            </time>
+                          </span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>Notification of acceptance or rejection.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <!-- 2025 February -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">February</span>
+                <div class="uia-timeline__groups">
+                  <!-- 27 February -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-3">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">AAAI-25</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2014-07-14">
+                              <span class="uia-card__day">27 FEB - 2 MAR</span>
+                              <span><span class="ha-screen-reader"></span></span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type conference">Conference</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>2025 39th Annual AAAI Conference on Artificial Intelligence (AAAI-25) in Philadelphia, Pennsylvania.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <!-- 2025 March -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">March</span>
+                <div class="uia-timeline__groups">
+                  <!-- March -->
+                </div>
+              </div>
+              <!-- 2025 April -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">April</span>
+                <div class="uia-timeline__groups">
+                  <!-- April -->
+                </div>
+              </div>
+              <!-- 2025 May -->
+              <div class="uia-timeline__annual-sections">
+                <span class="uia-timeline__month" aria-hidden="true">May</span>
+                <div class="uia-timeline__groups">
+                  <!-- 19 May -->
+                  <section class="uia-timeline__group" aria-labelledby="timeline-demo-1-heading-3">
+                    <div class="uia-timeline__point uia-card" data-uia-card-skin="1" data-uia-card-mod="1">
+                      <div class="uia-card__container">
+                        <div class="uia-card__intro">
+                          <h3 id="timeline-demo-1-heading-2" class="ra-heading">ICRA-25</h3>
+                          <span class="uia-card__time">
+                            <time datetime="2014-07-14">
+                              <span class="uia-card__day">19 - 25 May</span>
+                              <span><span class="ha-screen-reader"></span></span>
+                            </time>
+                          </span>
+                          <span class="uia-card__type conference">Conference</span>
+                        </div>
+                        <div class="uia-card__body">
+                          <div class="uia-card__description">
+                            <p>2025 IEE International Conference on Robotics & Automation (ICRA-25) in Atlanta, USA.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+
+      <div class="info">
+
+        <div class="links">
+          <h4> <abbr title="attribute">Links</abbr> </h4>
+          <ul>
+            <li><a href="https://docs.google.com/forms/d/1ZRyryZJkA9vpgFgDKnkqN6f4a9qFm5qH-gniSl0F0hM">Join the MI Team</a></li>
+            <li><a href="../news.html">News Events</a></li>
+            <li><a href="https://bee.utrgv.edu">IntelliBeeHive</a></li>
+            <li><a href="https://bee.utrgv.edu/poseEstimation.html">Pose Estimation</a></li>
+          </ul>
+        </div>
+
+        <div class="location-map">
+          <h4> <abbr title="attribute">Location</abbr> </h4>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14306.349603668754!2d-98.174096!3d26.3074725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cdc1bf01639f10c!2sUniversity%20of%20Texas%20Rio%20Grande%20Valley!5e0!3m2!1sen!2sus!4v1582001880791!5m2!1sen!2sus" width="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                
+            <p><a href="https://www.utrgv.edu/en-us/">University of Texas - Rio Grande Valley</a>, Edinburg TX 78539</p>
+            <p><a href="https://www.utrgv.edu/csci/index.htm">College of Engineering and Computer Science</a></p>
+        </div>
+
+        <div class="nav-contact-us">
+          <h4> <abbr title="attribute">Contact Us</abbr> </h4>
+          <img id="utrgv-logo" src="../images/navbar/utrgv-logo2.jpg">
+          <p>MI@UTRGV</p>
+          <p>EIEAB 2.210</p>
+          <p>Email: <a href="mailto:csci@utrgv.edu" target="_top">csci@utrgv.edu</a></p>    
+          <p>Phone: 956-665-2320</p>           
+        </div>
+
+    </div>
+        
+
+    <script type="text/javascript" src="../static/navbar.js?01"></script>
+    <script> showNavbar("research-topic"); </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../static/action.js?02"></script>
+
+    </body>
+</html>

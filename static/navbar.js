@@ -89,7 +89,8 @@ function showNavbar(page) {
     var opt2 = document.createElement('div');
     opt2.classList.add('drop-down');
     opt2.setAttribute('id', 'research-opt');
-    opt2.innerHTML = '<a class="nav-link" href="'+dir+'humanoid-locomotion.html">Humanoid Locomotion Simulation</a>';
+    opt2.innerHTML = '<a class="nav-link" href="'+dir+'benchmarks.html">Research Benchmarks</a>';
+    opt2.innerHTML += '<a class="nav-link" href="'+dir+'humanoid-locomotion.html">Humanoid Locomotion Simulation</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'hea-property-prediction.html">HEA Property Prediction</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'drug-discovery.html">Structural-Based Virtual Screening</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'bee-monitoring.html">Honey Bee Monitoring</a>';
