@@ -53,7 +53,7 @@ body {
 
 /* ------------------------------ Home Page --------------- */
 
-#curtain {
+.curtain {
     margin-top: 55px;
     top: 0; left: 0;
     width: 100%;
@@ -122,8 +122,10 @@ body {
 
 #news-articles {
     width: 100%;
-    height: 37rem;
-    padding: 25px;
+    height: auto;
+    padding: 0 25px 25px 25px;
+    margin-top: 20px;
+    margin-bottom: 25px;
     white-space: nowrap;
     position: relative;
     overflow-x: scroll;
@@ -137,7 +139,7 @@ body {
     white-space: normal;
     border-radius: 5px;
     background-color: #202020;
-    margin: 0 25px;
+    margin: 25px 25px 0 25px;
 }
 
 .article-title {
@@ -181,6 +183,30 @@ body {
     color: blue;
     font-size: 20px;
 }
+
+#view-all {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#view-all-btn {
+    width: 100px;
+    padding: 10px;
+    background-color: #F05023;
+    color: rgb(9, 5, 20);
+    border-radius: 5px;
+    border: #F05023;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#view-all-btn:hover {
+    background-color: #ce380e;
+}
+
+
+
 
 #home-carousel {
     width: 100%;

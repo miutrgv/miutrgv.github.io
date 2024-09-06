@@ -87,7 +87,7 @@
     height: 30rem;
     float: left;
     text-align: center;
-    background-color: #E8E8E8;
+    background-color: #303030;
     
     padding: 0 10%;
     transition: 0.3s;
@@ -101,16 +101,20 @@
 .info li {
     list-style-type: none;
     padding: 0.5rem;
+    margin-left: -5px;
+    margin-top: -15px;
 }
 
 .info a {
-    color:  #707070;
+    color:  whitesmoke;
     font-size: 16px;
     font-weight: 500;
+    /* text-decoration: underline solid whitesmoke; */
+    border-bottom: 1px solid whitesmoke;
 }
 
 .info p {
-    color:  #707070;
+    color:  whitesmoke;
     font-size: 16px;
     margin-bottom: 2px;
     font-weight: 500;
@@ -118,11 +122,13 @@
 
 .info h4 {
     color: #F05023;
+    border-bottom: none;
 }
 
 .info h4 abbr {
     font-size: 22px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .links {
