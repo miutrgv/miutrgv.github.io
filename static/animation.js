@@ -1,31 +1,29 @@
-const curtain = document.getElementsByClassName("curtain")[0];
-curtain.width = window.innerWidth;
-curtain.height = window.innerHeight;
-
+/*
+    Get HTML elements.
+    curtain: Where our particles are going to be loaded into.
+    home: Contains the home page content, so news and lab info.
+    title: Is the MI@UTRGV logo.
+*/
+const particle_div = document.getElementById("particles-js");
 const home = document.getElementById("home");
-home.style.marginTop = ( (window.innerHeight * 0.6 ) + 55) + "px";
-
 const title = document.getElementById("main-title-logo");
-var tempHeight = window.innerHeight * 0.6;
-var tempWidth = window.innerWidth;
 
-if (tempWidth > ((tempHeight / 2) * 3)) {
-        title.style.width = ((tempHeight / 2) * 3) + "px";
-        title.style.marginTop = (tempHeight / 4) + "px";
+// Get window dimensions
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
+
+// Set the margin of the home div according to the screen height.
+home.style.marginTop = ( (windowHeight * 0.6 ) + 55) + "px";
+particle_div.style.height = (windowHeight * 0.6) + "px";
+
+if (windowWidth > ((windowHeight * 0.6 / 2) * 3)) {
+        title.style.width = ((windowHeight * 0.6 / 2) * 3) + "px";
+        title.style.marginTop = (windowHeight * 0.6 / 4) + "px";
 }
 else {
-        title.style.width = tempWidth + "px";
-        title.style.marginTop = (tempHeight / 4) + "px";
+        title.style.width = windowWidth + "px";
+        title.style.marginTop = (windowHeight * 0.6 / 4) + "px";
 }
-
-window.addEventListener('resize', 
-    function() {
-        curtain.width = this.innerWidth;
-        curtain.height = this.innerHeight;
-        mouse.radius = ((curtain.height / 80) * (curtain.height) / 80);
-        init();
-    }
-);
 
 particlesJS("particles-js", {
     "particles": {
@@ -67,4 +65,4 @@ particlesJS("particles-js", {
         }
         }
     }
-    });
+});
