@@ -92,9 +92,10 @@ function showNavbar(page) {
     opt2.innerHTML = '<a class="nav-link" href="'+dir+'benchmarks.html">Research Benchmarks</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'humanoid-locomotion.html">Humanoid Locomotion Simulation</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'hea-property-prediction.html">HEA Property Prediction</a>';
+    opt2.innerHTML += '<a class="nav-link" href="'+dir+'concrete-conductivity.html">Concrete Conductivity Simulation</a>';
+    opt2.innerHTML += '<strong style="margin-left: 10px; color: #F05023; font-size: 16px; font-weight: 700;">Archived:</strong>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'drug-discovery.html">Structural-Based Virtual Screening</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'bee-monitoring.html">Honey Bee Monitoring</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'concrete-conductivity.html">Concrete Conductivity Simulation</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'pose-estimation.html">Pose Estimation</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'vcore.html">VCORE Emergency Management</a>';
     opt2.innerHTML += '<a class="nav-link" href="'+dir+'salinity-forecast.html">Rio Grande Salinity Forecast</a>';
