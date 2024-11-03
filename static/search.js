@@ -1,9 +1,9 @@
-var people = document.getElementsByClassName("member");
-var names = [];
-var ids = [];
-for (var i = 0; i < people.length; i++) {
+let people = document.getElementsByClassName("member");
+let names = [];
+let ids = [];
+for (let i = 0; i < people.length; i++) {
 	ids.push(people[i].getAttribute("id"));
-	var h5s = people[i].getElementsByClassName("member-info")[0].getElementsByTagName("h5");
+	let h5s = people[i].getElementsByClassName("member-info")[0].getElementsByTagName("h5");
 	if (h5s.length > 0)
 		names.push(h5s[0].innerHTML.toLowerCase());
 	else
@@ -13,15 +13,15 @@ for (var i = 0; i < people.length; i++) {
 $("#search-bar").on("keyup", function() {
 
 	if ($(this).val().length > 0) {
-		var lower = $(this).val().toLowerCase();
+		let lower = $(this).val().toLowerCase();
 		$(".member").attr("data-aos", " ");
 		$(".member").hide();
 		$(".sub-title").hide();
 		$(".member-classification").hide();
 
-		for (var j = 0; j < names.length; j++) {
-			if (lower == names[j].substring(0, lower.length)) {
-				var cloned = $("#"+ids[j]).clone();
+		for (let j = 0; j < names.length; j++) {
+			if (names[j].includes(lower)) {
+				let cloned = $("#"+ids[j]).clone();
 				cloned.attr("class", "member clone");
 				cloned.insertBefore("#start");
 				cloned.show();
