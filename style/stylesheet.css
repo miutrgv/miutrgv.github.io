@@ -83,6 +83,49 @@ body {
     background-color: #303030;
 }
 
+/* -------- Announcments -------------- */
+/* -- Announcements & Events in index.html -- */
+#announcements {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.event-block {
+    display: inline-block;
+    width: 400px;
+    padding: 0 15px;
+    height: auto;
+    vertical-align: top;
+}
+
+.event-title {
+    background-color: #F05023;
+    color: #303030;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+}
+
+.event {
+    width: 100%;
+    margin-top: 15px;
+    border-bottom: dotted 1px whitesmoke;
+}
+
+.event-date {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.event-subject {
+    color: whitesmoke;
+    font-size: 22px;
+}
+
+/* ---------------- */
+
 #news {
     width: 100%;
     margin-top: 60px;
