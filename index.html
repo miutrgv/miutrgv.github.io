@@ -142,8 +142,8 @@
         <h2 class="event-title">Events</h2>
 
         <div class="event">
-          <!-- <h5 class="event-date">10:30 AM - Every Friday</h5>
-          <p class="event-subject">MI Lab Weekly Meeting<br>in EIEAB 2.210</p> -->
+          <h5 class="event-date"><span id="next-friday"></span> - 10:30 AM</h5>
+          <p class="event-subject">MI Lab Meeting<br>room EIEAB 2.210</p>
         </div>
 
       </div>
@@ -153,8 +153,8 @@
         <h2 class="event-title">Announcements</h2>
 
         <div class="event">
-          <h5 class="event-date">Meeting Canceled</h5>
-          <p class="event-subject">Friday 2/14 Meeting is canceled.</p>
+          <h5 class="event-date"></h5>
+          <p class="event-subject"></p>
         </div>
 
       </div>
@@ -1090,7 +1090,21 @@
       }
     };
   </script>
+  <script>
+    function getNextFriday() {
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 is Sunday, 1 is Monday, ..., 5 is Friday, 6 is Saturday
+    const daysUntilFriday = (5 - dayOfWeek + 7) % 7; // Calculate days until next Friday
+    const nextFriday = new Date(today);
+    nextFriday.setDate(today.getDate() + daysUntilFriday);
 
+    const options = { month: 'long', day: 'numeric' };
+    return nextFriday.toLocaleDateString(undefined, options);
+    }
+
+    const nextFridayDate = getNextFriday();
+    document.getElementById("next-friday").innerHTML = nextFridayDate;
+  </script>
 </body>
 
 </html>
