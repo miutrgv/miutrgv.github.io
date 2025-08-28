@@ -73,7 +73,7 @@ function showNavbar(page) {
     var opt3 = document.createElement('div');
     opt3.classList.add('drop-down');
     opt3.setAttribute('id', 'people-opt');
-    opt3.innerHTML = '<a class="nav-link" href="'+dir+'people.html#research-teams">Research Teams</a>';
+    opt3.innerHTML = '<a class="nav-link" href="'+dir+'people.html#members">Members</a>';
     opt3.innerHTML += '<a class="nav-link" href="'+dir+'people.html#collaborators">Collaborators</a>';
     opt3.innerHTML += '<a class="nav-link" href="'+dir+'people.html#faculty">Faculty</a>';
     opt3.innerHTML += '<a class="nav-link" href="'+dir+'people.html#alumni">Alumni</a>';
