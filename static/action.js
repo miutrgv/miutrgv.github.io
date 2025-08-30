@@ -47,17 +47,17 @@ $(".member").on("mouseleave", function() {
 });
 
 
-// --------------- People Page --------------------
+// --------------- Research Page --------------------
 
 // Zooms in picture and changes border color to orange.
 $(".research-item").on("mouseover", function() {
 
-    $(this).find("img").css("padding", "0");
+    $(this).find(".research-img").css("padding", "0");
     $(this).find(".research-item-body").css("border-top", "5px solid #F05023");
 });
 $(".research-item").on("mouseleave", function() {
 
-    $(this).find("img").css("padding", "10px");
+    $(this).find(".research-img").css("padding", "10px");
     $(this).find(".research-item-body").css("border-top", "5px solid black");
 });
 

@@ -364,16 +364,16 @@ body {
     color: #707070;
 }
 
-#research strong {
+/* #research strong {
     color: #F05023;
-}
+} */
 
 #research .research-item {
     background-color: white;
     margin-bottom: 15px;
     margin-right: 15px;
     width: 375px;
-    padding-top: 475px;
+    padding-top: 500px;
     position: relative;
     /*max-width: 30rem;*/
     display: inline-block;
@@ -393,7 +393,7 @@ body {
     background-color: white;
     position: absolute;
     bottom: 0;
-    height: 275px;
+    height: 300px;
     padding: 15px;
     border-top: 6px solid black;
     transition: 0.3s;
@@ -432,23 +432,29 @@ body {
 }
 
 .collaborator {
-    /*display: inline-block;*/
-    float: left;
-    height: 100px;
-    width: 100px;
-    margin-top: 10px;
+    width: 100%;
+    padding: 10px 25px;
+    display: inline-block;
+    text-align: start;
+    position: absolute;
+    bottom: 0; left: 0;
 }
 
-.collaborator p {
-    text-align: center;
-    font-size: x-small;
+.collaborator strong {
+    font-weight: 600;
+    color: #303030;
 }
 
 .collaborator img {
-    height: 40px;
-    width: 40px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
     margin: 5px; 
+    cursor: pointer;
+}
+
+.collaborator img:hover {
+    border: 3px solid #F05023;
 }
 
 .research-description {
