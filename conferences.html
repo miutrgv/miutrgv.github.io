@@ -9,13 +9,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" integrity="sha512-Mg6+Xk7o4R9e8tqpqpu4IbnBf8+D1mD1D+LMA2xEuBaI0K3jfJ6iNVb6VQYdgE+Xb6xBGt2GK9Bnl+WDX0UHMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style/stylesheet.css?002">
   <link rel="stylesheet" href="style/navbar.css">
-
     <style>
-      #conferences {
-        padding: 20px 20px 80px 20px;
-        max-width: 900px;
-        margin: 0 auto;
-      }
+        #conferences {
+            padding: 20px 20px 80px 20px;
+            max-width: 940px;
+            margin: 0 auto;
+            background-color: grey;
+        }
+
+        .conf-section {
+            background-color: white;
+            padding: 25px;
+            border-left: 6px solid #202020;
+            transition: 0.3s;
+        }
+
+        .conf-section:hover {
+            border-left: 6px solid #F05023;
+        }
+
+        /* Make markdown tables distribute columns evenly */
+        .conf-table {
+            width: 100%;
+            table-layout: fixed; /* equal-width columns when no widths specified */
+            border-collapse: collapse;
+        }
+
+        .conf-table th,
+        .conf-table td {
+            padding: 8px;
+            border: 1px solid #e1e4e8;
+            overflow-wrap: anywhere;
+            white-space: normal;
+            text-align: left;
+        }
+
+        .conf-table th {
+            background-color: #f6f8fa;
+            font-weight: 600;
+        }
     </style>
 </head>
     <body>
@@ -98,7 +130,9 @@
               container.innerHTML = marked.parse(markdown, {
                 headerIds: false,
                 mangle: false,
-                breaks: true
+                breaks: true,
+                gfm: true,
+                allowHtml: true
               });
             })
             .catch(function(error) {
