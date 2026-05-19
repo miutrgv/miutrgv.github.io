@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Research</title>
+	<link rel="icon" href="images/navbar/miutrgv_logo.png?1" sizes="32x32" type="image/png">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" integrity="sha512-Mg6+Xk7o4R9e8tqpqpu4IbnBf8+D1mD1D+LMA2xEuBaI0K3jfJ6iNVb6VQYdgE+Xb6xBGt2GK9Bnl+WDX0UHMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style/stylesheet.css?002">
+  <link rel="stylesheet" href="style/navbar.css">
+
+
+
+</head>
+    <body>
+
+        <nav id="mi-navbar"></nav>
+
+        <div class="pg-title">
+
+          <h2 class="display-4"> Conferences </h2>
+
+        </div>
+
+        <div id="conferences">  
+
+            
+        </div> 
+
+
+        <div class="info">
+
+          <div class="links">
+            <h4> <abbr title="attribute">Links</abbr> </h4>
+            <ul>
+              <li><a href="https://docs.google.com/forms/d/1ZRyryZJkA9vpgFgDKnkqN6f4a9qFm5qH-gniSl0F0hM">Join the MI Team</a></li>
+              <li><a href="news.html">News Events</a></li>
+              <li><a href="https://bee.utrgv.edu">IntelliBeeHive</a></li>
+              <li><a href="https://bee.utrgv.edu/poseEstimation.html">Pose Estimation</a></li>
+            </ul>
+          </div>
+
+          <div class="location-map">
+            <h4> <abbr title="attribute">Location</abbr> </h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14306.349603668754!2d-98.174096!3d26.3074725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cdc1bf01639f10c!2sUniversity%20of%20Texas%20Rio%20Grande%20Valley!5e0!3m2!1sen!2sus!4v1582001880791!5m2!1sen!2sus" width="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                
+              <p><a href="https://www.utrgv.edu/en-us/">University of Texas Rio Grande Valley</a>, Edinburg TX 78539</p>
+              <p><a href="https://www.utrgv.edu/csci/index.htm">College of Engineering and Computer Science</a></p>
+          </div>
+
+          <div class="nav-contact-us">
+            <h4> <abbr title="attribute">Contact Us</abbr> </h4>
+            <img id="utrgv-logo" src="images/navbar/utrgv-logo2.jpg">
+            <p>MI@UTRGV</p>
+            <p>EIEAB 2.210</p>
+            <p>Email: <a href="mailto:csci@utrgv.edu" target="_top">csci@utrgv.edu</a></p>    
+            <p>Phone: 956-665-2320</p>           
+          </div>
+
+      </div>
+        
+
+      <script type="text/javascript" src="static/navbar.js?01"></script>
+      <script> showNavbar(""); </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script> AOS.init(); </script>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script type="text/javascript" src="static/action.js?04"></script>
+      <script type="text/javascript" src="static/search_res.js?01"></script>
+      <script>
+        (function() {
+          const container = document.getElementById('conferences');
+          const markdownUrl = 'https://raw.githubusercontent.com/Christian-Narcia/Conferences/main/README.md';
+
+          if (!container) {
+            return;
+          }
+
+          container.classList.add('markdown-body');
+          container.innerHTML = '<p>Loading conferences content from GitHub...</p>';
+
+          fetch(markdownUrl)
+            .then(function(response) {
+              if (!response.ok) {
+                throw new Error('HTTP ' + response.status + ' ' + response.statusText);
+              }
+              return response.text();
+            })
+            .then(function(markdown) {
+              container.innerHTML = marked.parse(markdown, {
+                headerIds: false,
+                mangle: false,
+                breaks: true
+              });
+            })
+            .catch(function(error) {
+              container.innerHTML = '<p style="color: red;">Failed to load conferences content from GitHub. ' +
+                'Check the markdown URL and GitHub file permissions.<br>' +
+                error.message + '</p>';
+            });
+        })();
+      </script>
+
+    </body>
+</html>
