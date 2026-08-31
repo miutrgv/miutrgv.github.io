@@ -579,8 +579,8 @@ body {
 
 .member {
     background-color: white;
-    width: 14rem;
-    height: 27rem;
+    width: 16rem;
+    height: 29rem;
     text-align: center;
     display: inline-block;
     margin-bottom: 20px;
@@ -630,8 +630,8 @@ body {
 }
 
 .member img {
-    height: 14rem;
-    width: 14rem;
+    height: 16rem;
+    width: 16rem;
     padding: 10px;
     transition: 0.3s;
 }
