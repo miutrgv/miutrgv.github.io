@@ -1,0 +1,152 @@
+[
+{
+    "id": "swin-unet",
+    "hidden": true,
+    "title": "Meidcal Image Segmentations",
+    "image": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjZvdnRzMDFrY25ibmxuZ2cyaXlpOWM4aGVqaHk0YWRrZjg5OHlmbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ATsWtUsuuFRfq8OhZ7/giphy.gif",
+    "overview": "Originally developed for natural language processing, transformers are now being applied to computer vision tasks. The Vision Transformer...",
+    "readMore": "research/swin-unet.html",
+    "projectLink": "",
+    "members": []
+  },
+  {
+    "id": "poseed",
+    "title": "Pose estimation",
+    "image": "images/research/pose_estimation.gif",
+    "overview": "Pose Estimation is a topic in computer vision focusing on analyzing object movement, specifically...",
+    "readMore": "research/pose-estimation.html",
+    "projectLink": "https://bee.utrgv.edu/poseEstimation.html",
+    "members": [
+      {
+        "name": "Md Ashraful Islam",
+        "profile": "people.html#ashraful-islam",
+        "image": "images/people/md_ashraful_islam.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "honeybee",
+    "title": "Honey bee monitoring system (Completed)",
+    "image": "images/research/intellibeehive.gif",
+    "overview": "The Honey Bee Monitoring System is a system designed to monitor the overall health of the honey...",
+    "readMore": "research/bee-monitoring.html",
+    "projectLink": "https://bee.utrgv.edu",
+    "members": [
+      {
+        "name": "Christian Narcia",
+        "profile": "people.html#christian-narcia",
+        "image": "images/people/christian_narcia.jpg"
+      },
+      {
+        "name": "Joselito Guardado",
+        "profile": "people.html#joselito-guardado",
+        "image": "images/people/joselito.jpg"
+      },
+      {
+        "name": "Juan Velazquez",
+        "profile": "people.html#juan-velazquez",
+        "image": "images/people/juan_velazquez.jpg"
+      }
+    ]
+  },
+  {
+    "id": "vcore",
+    "title": "VCORE Emergency Management Tool (Completed)",
+    "image": "images/research/forecasting.gif",
+    "overview": "The VCORE Emergency Management Tool was designed to aid emergency management services...",
+    "readMore": "research/vcore.html",
+    "projectLink": "https://vcore.utrgv.edu/",
+    "members": [
+      {
+        "name": "Martin Flores",
+        "profile": "people.html#martin-flores",
+        "image": "images/people/martin_flores.jpg"
+      },
+      {
+        "name": "Cesar Davila",
+        "profile": "people.html#cesar-davila",
+        "image": "images/people/cesar_davila.jpeg"
+      },
+      {
+        "name": "Joselito Guardado",
+        "profile": "people.html#joselito-guardado",
+        "image": "images/people/joselito.jpg"
+      }
+    ]
+  },
+  {
+    "id": "concrete",
+    "title": "Concrete conductivity simulation",
+    "image": "images/research/fluid_simulation.gif",
+    "overview": "Concrete conductivity is the idea of bridging the top of the concrete to the bottom with Metal Fiber...",
+    "readMore": "research/concrete-conductivity.html",
+    "projectLink": "",
+    "members": [
+      {
+        "name": "Christian Narcia",
+        "profile": "people.html#christian-narcia",
+        "image": "images/people/christian_narcia.jpg"
+      }
+    ]
+  },
+  {
+    "id": "target-aware",
+    "title": "Drug Design: Target Aware Molecule Generation",
+    "image": "images/research/target-aware.png",
+    "overview": "This project focuses on generating molecules with improved binding affinity to specific target proteins, a critical aspect of...",
+    "readMore": "research/target-aware.html",
+    "projectLink": "",
+    "members": [
+      {
+        "name": "Angel Peredo",
+        "profile": "people.html#angel-peredo",
+        "image": "images/people/angel_peredo.jpg"
+      }
+    ]
+  },
+  {
+    "id": "salinity",
+    "title": "Lower Rio Grande River Salinity Forecasting (Completed)",
+    "image": "images/research/salinity.gif",
+    "overview": "Rio Grande River Salinity Forecasting aims to provide a 6 hour to 48 hour forecasting in salinity levels...",
+    "readMore": "research/salinity-forecast.html",
+    "projectLink": "https://lrgsf.utrgv.edu",
+    "members": [
+      {
+        "name": "Christian Narcia",
+        "profile": "people.html#christian-narcia",
+        "image": "images/people/christian_narcia.jpg"
+      },
+      {
+        "name": "Juan Velazquez",
+        "profile": "people.html#juan-velazquez",
+        "image": "images/people/juan_velazquez.jpg"
+      },
+      {
+        "name": "Joselito Guardado",
+        "profile": "people.html#joselito-guardado",
+        "image": "images/people/joselito.jpg"
+      }
+    ]
+  },
+  {
+    "id": "locomotion-vla",
+    "title": "Stable Locomotion in Humanoid Robots Using VLA",
+    "image": "images/home/miutrgv_home.svg",
+    "overview": "Developing methods to control humanoid robots and achieve stable locomotion using Vision-Language-Action (VLA) models...",
+    "readMore": "research/humanoid-vla.html",
+    "projectLink": "",
+    "members": [
+      {
+        "name": "Christian Narcia",
+        "profile": "people.html#christian-narcia",
+        "image": "images/people/christian_narcia.jpg"
+      },
+      {
+        "name": "Jerry Wang",
+        "profile": "people.html#jerry-wang",
+        "image": "images/people/jerry_wang.png"
+      }
+    ]
+  }
+]
