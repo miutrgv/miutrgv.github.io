@@ -4,6 +4,7 @@
 // Each entry supports:
 //   id          unique anchor id used by the search bar
 //   title       project name shown in the heading
+//   subname     short label used for this project in the navbar dropdown
 //   image       thumbnail path or URL
 //   overview    short blurb shown before the "Read More" link
 //   readMore    page with the full write-up
