@@ -80,27 +80,45 @@ function showNavbar(page) {
 
     document.getElementById('nav-opt3').append(opt3);
 
-    dir = 'research/';
-    if (page == "research-topic") {
-        dir = '';
-    }
-
     // Create and append Research dropdown links.
     var opt2 = document.createElement('div');
     opt2.classList.add('drop-down');
     opt2.setAttribute('id', 'research-opt');
-    opt2.innerHTML = '<a class="nav-link" href="'+dir+'benchmarks.html">Research Benchmarks</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'humanoid-locomotion.html">Humanoid Locomotion Simulation</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'hea-property-prediction.html">HEA Property Prediction</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'concrete-conductivity.html">Concrete Conductivity Simulation</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'drug-discovery.html">Structural-Based Virtual Screening</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'pose-estimation.html">Pose Estimation</a>';
-    opt2.innerHTML += '<strong style="margin-left: 10px; color: #F05023; font-size: 16px; font-weight: 700;">Completed:</strong>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'bee-monitoring.html">Honey Bee Monitoring</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'vcore.html">VCORE Emergency Management</a>';
-    opt2.innerHTML += '<a class="nav-link" href="'+dir+'salinity-forecast.html">Rio Grande Salinity Forecast</a>';
+    opt2.innerHTML = '<a class="nav-link" href="'+dir+'conferences.html">Conferences</a>';
+    // Conferences is not a research project, so a line separates it from them.
+    opt2.innerHTML += '<div class="drop-down-divider"></div>';
 
     document.getElementById('nav-opt2').append(opt2);
+
+    // The project links come from data/research.json, so adding a project
+    // there also adds it to this dropdown. Each entry uses its "subname" as
+    // the label and its "readMore" page as the link; "hidden" entries are
+    // left out, same as on the research page.
+    var researchData = dir + 'data/research.json';
+
+    fetch(researchData)
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error("Could not load " + researchData + " (" + response.status + ")");
+            }
+            return response.json();
+        })
+        .then(function(projects) {
+            projects.forEach(function(project) {
+                if (project.hidden) {
+                    return;
+                }
+
+                var link = document.createElement('a');
+                link.classList.add('nav-link');
+                link.setAttribute('href', dir + project.readMore);
+                link.textContent = project.subname || project.title;
+                opt2.append(link);
+            });
+        })
+        .catch(function(error) {
+            console.error(error);
+        });
 }
 
 

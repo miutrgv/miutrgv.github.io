@@ -2,6 +2,7 @@
   {
     "id": "specialist-vla",
     "title": "Specialist VLA: Planner-Routed LoRA Specialization for Long-Horizon Robotic Manipulation",
+    "subname": "Specialist VLA",
     "image": "images/research/specialist-vla.jpg",
     "overview": "Specialist VLA enhances robotic reliability by breaking down complex, multi-step tasks into a series of expert-level ...",
     "readMore": "research/specialist-vla.html",
@@ -17,6 +18,7 @@
   {
     "id": "musculoskeletal-rl",
     "title": "Musculoskeletal Reinforcement Learning for Human Locomotion",
+    "subname": "Musculoskeletal RL",
     "image": "images/home/miutrgv_home.svg",
     "overview": "This research focuses on developing reinforcement learning agents that can learn natural and biologically realistic locomotion...",
     "readMore": "research/musculoskeletal-rl.html",
@@ -42,6 +44,7 @@
   {
     "id": "scac-benchmarks",
     "title": "Multi-Agent Reinforcement Learning",
+    "subname": "Multi-Agent RL",
     "image": "images/research/scac-benchmark-transformer.png",
     "overview": "We are revolutionizing the StarCraft Multi-Agent Challenge (SMAC) benchmarks by introducing a novel transformer-based...",
     "readMore": "research/enhancing-scac.html",
@@ -57,6 +60,7 @@
   {
     "id": "multi-task",
     "title": "Multi-Task Reinforcement Learning",
+    "subname": "Multi-Task RL",
     "image": "https://meta-world.github.io/figures/mt10.gif",
     "overview": "Multi-task reinforcement learning (RL) focuses on training agents to perform well across multiple related tasks rather than specialize in a single task. This approach...",
     "readMore": "research/multi-task-rl.html",

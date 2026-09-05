@@ -10,7 +10,10 @@ $("#nav-opt3").on("mouseleave", function() {
 
 // Show dropdown links for Research.
 $("#nav-opt2").on("mouseover", function() {
-    document.getElementById('research-opt').style.height = '425px';
+    // Measured instead of fixed so the panel fits however many projects
+    // navbar.js pulled from data/research.json.
+    var dropdown = document.getElementById('research-opt');
+    dropdown.style.height = dropdown.scrollHeight + 'px';
 });
 $("#nav-opt2").on("mouseleave", function() {
     document.getElementById('research-opt').style.height = '0px';

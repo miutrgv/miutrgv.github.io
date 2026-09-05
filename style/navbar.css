@@ -72,6 +72,12 @@
     display: block;
 }
 
+/* Sets the constant Conferences link apart from the project list below it. */
+.drop-down-divider {
+    margin: 6px 0 8px;
+    border-bottom: 1px solid #F05023;
+}
+
 .navbar .nav-link:hover {
     border-bottom: 3px solid #F05023;
 }
