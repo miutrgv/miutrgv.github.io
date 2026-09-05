@@ -1,0 +1,72 @@
+[
+  {
+    "id": "specialist-vla",
+    "title": "Specialist VLA: Planner-Routed LoRA Specialization for Long-Horizon Robotic Manipulation",
+    "image": "images/research/specialist-vla.jpg",
+    "overview": "Specialist VLA enhances robotic reliability by breaking down complex, multi-step tasks into a series of expert-level ...",
+    "readMore": "research/specialist-vla.html",
+    "projectLink": "",
+    "members": [
+      {
+        "name": "Christian Narcia",
+        "profile": "people.html#christian-narcia",
+        "image": "images/people/christian_narcia.jpg"
+      }
+    ]
+  },
+  {
+    "id": "musculoskeletal-rl",
+    "title": "Musculoskeletal Reinforcement Learning for Human Locomotion",
+    "image": "images/home/miutrgv_home.svg",
+    "overview": "This research focuses on developing reinforcement learning agents that can learn natural and biologically realistic locomotion...",
+    "readMore": "research/musculoskeletal-rl.html",
+    "projectLink": "",
+    "members": [
+      {
+        "name": "Jose Franco",
+        "profile": "people.html#jose-franco",
+        "image": "images/people/jose_franco.png"
+      },
+      {
+        "name": "Nicolas Guerra",
+        "profile": "people.html#nicolas-guerra",
+        "image": "images/people/nicolas_guerra.jpg"
+      },
+      {
+        "name": "Diana Castilleja",
+        "profile": "people.html#diana-castilleja",
+        "image": "images/people/diana_castilleja.png"
+      }
+    ]
+  },
+  {
+    "id": "scac-benchmarks",
+    "title": "Multi-Agent Reinforcement Learning",
+    "image": "images/research/scac-benchmark-transformer.png",
+    "overview": "We are revolutionizing the StarCraft Multi-Agent Challenge (SMAC) benchmarks by introducing a novel transformer-based...",
+    "readMore": "research/enhancing-scac.html",
+    "projectLink": "",
+    "members": [
+      {
+        "name": "Daniel Masamba",
+        "profile": "people.html#daniel-masamba",
+        "image": "images/people/daniel_masamba.jpg"
+      }
+    ]
+  },
+  {
+    "id": "multi-task",
+    "title": "Multi-Task Reinforcement Learning",
+    "image": "https://meta-world.github.io/figures/mt10.gif",
+    "overview": "Multi-task reinforcement learning (RL) focuses on training agents to perform well across multiple related tasks rather than specialize in a single task. This approach...",
+    "readMore": "research/multi-task-rl.html",
+    "projectLink": "",
+    "members": [
+      {
+        "name": "Adan Gandarilla",
+        "profile": "people.html#adan-gandarilla",
+        "image": "images/people/adan.png"
+      }
+    ]
+  }
+]
